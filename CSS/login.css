@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+body
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #ffb657;
+    overflow: hidden;
+}
+.form
+{
+    position: relative;
+    width: 2950px;
+    padding: 40px 40px 60px;
+    border-radius: 10px;
+    text-align: center;
+    height: 625px;
+    left: -0px;
+    transition: 1s;
+    opacity: 1;
+    z-index: 100;
+    transform: translateY(0px);
+
+}
+.form h2
+{
+    position: absolute;
+    top: 60px;
+    color: rgb(124, 39, 0);
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 3em;
+    letter-spacing: 5px;
+}
+.form .input
+{
+    position: relative;
+    top: 80px;
+    margin-top: 40px;
+    text-align: left;
+}
+.form .input .inputBox
+{
+    margin-top: 10px;
+    transition: 0.5s;
+}
+.form .input .inputBox label
+{
+    display: block;
+    color: rgb(48, 0, 0);
+    margin-bottom: 5px;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+.form .input .inputBox input
+{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    padding: 5px 15px;
+    background: transparent;
+    border-bottom: 2px solid #00ff7b;
+    color: rgb(20, 0, 109);
+    font-size: 18px;
+    /* border-radius: 10px; */
+}
+.form .input .inputBox input[type="submit"]
+{
+    cursor: pointer;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    background:linear-gradient(90deg,#5d02ff,#e91e63) ;
+    border: none;
+    color: #00ff7b;
+}
+.form .input .inputBox input[type="submit"]:hover
+{
+    box-shadow: 0 0 10px #e91e63;
+    background:linear-gradient(90deg,#5d02ff,#e91e63) ;
+    
+}
+.form .input .inputBox input[type="submit"]:active
+{
+    color: rgba(255, 255, 255, 0.521);
+    background:linear-gradient(315deg,#e91e6271,#5f02ff8c) ;
+}
+.forgot
+{
+    position: relative;
+    top: 75px;
+    margin-top: 10px;
+    color: rgb(12, 0, 63);
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+.forgot a
+{
+    color: #960500;
+}
+.signup
+{
+    position: relative;
+    top: 80px;
+
+    color:#0023a0;
+
+}
+.signup a
+{
+    color: #00361a;
+    text-decoration: none;
+    font-weight: 700;
+}
+.form.active 
+{
+    opacity: 1;
+}
+.error
+{
+    position: relative;
+    color: rgb(255, 17, 0);
+    top: 90px;
+    font-weight: 700;
+    font-family: "calibri";
+    
+
+}
+.error u
+{
+    color: red;
+    
+}

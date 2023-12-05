@@ -1,0 +1,115 @@
+.qr_code_scanner 
+{
+    position: absolute;
+    height: 490px;
+    width: 82%;
+    top: 12%;
+    left: 16%;
+    background-color: transparent;
+    display: flex;
+    max-width: 84%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    transition: 0.5s;
+    border-radius: 20px;
+    padding-left: 15px;
+    padding-right: 5px;
+    scroll-behavior: smooth;
+    /*to change */
+    height: 0%;
+    z-index: -1;
+    display: none;
+    
+}
+#webcamimg
+{
+    display: none;
+}
+#qrimg
+{
+    display: none;
+}
+table
+{
+    position: relative;
+    left: 10%;
+}
+#mainbody{
+    background: transparent;
+    width:100%;
+	display:none;
+    position: absolute;
+}
+#footer{
+    background:white;
+    display: none;
+}
+#v{
+    width:550px;
+    height:380px;
+    
+}
+#qr-canvas{
+    display:none;
+}
+#qrfile{
+    width:1600px;
+    height:1200px;
+}
+#mp1{
+    text-align:center;
+    font-size:35px;
+}
+#imghelp{
+    position:relative;
+    left:0px;
+    width: 70%;
+    top:-160px;
+    z-index:100;
+    font:18px arial,sans-serif;
+    background:transparent;
+	margin-left:35px;
+	margin-right:35px;
+	padding-top:10px;
+	padding-bottom:10px;
+	border-radius:20px;
+}
+.selector{
+    margin:0;
+    padding:0;
+    cursor:pointer;
+    margin-bottom:-5px;
+}
+#outdiv
+{
+    width:640px;
+    height:480px;
+    overflow: hidden;
+}
+#result{
+	padding:0;
+	width:70%;
+    position:  absolute;
+     top: 80%;
+     font-size: 20px;
+     left: 30%;
+     font-family: "calibri";
+     font-weight: 700;
+     color: #fff;
+}
+
+ul{
+    margin-bottom:0;
+    margin-right:40px;
+}
+li{
+    display:inline;
+    padding-right: 0.5em;
+    padding-left: 0.5em;
+    font-weight: bold;
+    border-right: 1px solid #333333;
+}
+li a{
+    text-decoration: none;
+    color: black;
+}

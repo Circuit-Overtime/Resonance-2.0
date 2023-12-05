@@ -1,0 +1,99 @@
+.logout
+{
+    position: absolute;
+    background: #060c2186;
+    backdrop-filter: blur(25px);
+    width: 350px;
+    padding: 40px 40px 60px;
+    border-radius: 10px;
+    text-align: center;
+    height: 250px;
+    left: 510px;
+    transition: 1s;
+    /* change this section  */
+    opacity: 0;
+    z-index: -1;
+    transition: 0.5s;
+    transform: translateY(750px);
+
+}
+
+.logout h2
+{
+    position: relative;
+    top: 10px;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+.logout .input
+{
+    position: relative;
+    top: 0px;
+    margin-top: 40px;
+    text-align: left;
+}
+.logout .input .inputBox
+{
+    margin-top: 10px;
+    transition: 0.5s;
+}
+.logout_greetings 
+{
+    text-transform: capitalize;
+    color: #e9c41e;
+
+}
+.logout .input .inputBox label
+{
+    display: block;
+    color: #fff;
+    margin-bottom: 5px;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+.logout .input .inputBox input
+{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    padding: 5px 15px;
+    background:linear-gradient(315deg,#e9c41e,#ff5202) ;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 10px;
+}
+.logout .input .inputBox input[type="submit"]
+{
+    cursor: pointer;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    transition: 0.5s;
+}
+.logout .input .inputBox input[type="submit"]:hover
+{
+    box-shadow: 0 0 10px #e91e63;
+    background:linear-gradient(315deg,#ff5202, #e9c41e) ;
+    
+}
+.logout .input .inputBox input[type="submit"]:active
+{
+    color: rgba(255, 255, 255, 0.521);
+    background:linear-gradient(315deg,#ff5202, #635100) ;
+}
+
+.re_enter
+{
+    position: absolute;
+    top: 5%;
+    left: 95%;
+    z-index: 10;
+    font-size: 24px;
+    color: #635100;
+    font-weight: 700;
+    cursor: pointer;
+    display: none;
+}

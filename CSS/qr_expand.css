@@ -1,0 +1,205 @@
+.qr_expand
+{
+    position: absolute;
+    height: 350px;
+    width: 300px;
+    background: rgba(20, 20, 20, 0.863);
+    border-radius: 16px;
+    box-shadow: 0 0px 40px rgb(0, 0, 0); 
+     backdrop-filter: blur(7.6px); 
+     -webkit-backdrop-filter: blur(7.6px); 
+     border: 2px solid #222; 
+    overflow: hidden;
+    z-index: 1004;
+    top: 20%;
+    left: 40%;
+    transition: 0.5s;
+    transform: translate(-1000px);
+}
+.adver_song_expand
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    pointer-events: none;
+}
+#barcode_expand
+{
+  position: absolute;
+  background-color: transparent;
+  height: 60px;
+  top: 79%;
+  width: 60px;
+  left: 20px;
+  transition: 0.5s;
+  overflow: hidden;
+  pointer-events: none;
+  background-size: cover;
+  background-position: center;
+  /* border-radius: 50%; */
+}
+
+.waveforms_expand
+{
+  position: absolute;
+  top: 82%;
+  left: 30%;
+  height: 40px;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  transition: 0.5s;
+  pointer-events: none;
+}
+.waveforms_expand .waveform_expand
+{
+  position: relative;
+  margin-right: 3px;
+  height: 35px;
+  background-color: #ffffff;
+  width: 4px;
+  top: 2.5px;
+  left: 0;
+  border-radius: 5px;
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+#album_unit_player_expand
+{
+  content: '';
+  position: relative;
+  height: 138px;
+  width: 138px;
+  left: 81px;
+  top: 10px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  background-position: center;
+  background-size: cover;
+  pointer-events: none;
+}
+.song_name_adver_expand
+{
+    position: absolute;
+    top: 155px;
+    width: 70%;
+    word-wrap: break-word;
+    font-size: 18px;
+    left: 16%;
+    color: #fff;
+    text-align: center;
+    pointer-events: none;
+}
+
+#qr_expand_seek
+{
+    position: absolute;
+    top: 205px;
+    -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  left: 5%;
+  width: 90%; /* Full-width */
+  height: 5px; /* Specified height */
+  background: #ffffff; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 1; /* Set transparency (for mouse-over effects on hover) */
+  border-radius: 25px;
+ transition: 0.5s;
+ pointer-events: none;
+}
+#qr_expand_seek::-webkit-slider-thumb
+{
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 10px; /* Set a specific slider handle width */
+    height: 10px; /* Slider handle height */
+    background: rgb(255, 255, 255); /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 50%;
+    transition: 0.5s;
+    pointer-events: none;
+}
+.qr_expand_start_time
+{
+    position: absolute;
+    top: 215px;
+    left: 5%;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: "calibri";
+    color: #fff;
+    pointer-events: none;
+}
+.qr_expand_end_time
+{
+    position: absolute;
+    top: 215px;
+    left: 85%;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: "calibri";
+    color: #fff;
+    pointer-events: none;
+}
+.qr_expand_heart
+{
+    position: absolute;
+    top: 180px;
+    left: 90%;
+    color: #fff;
+    font-size: 20px;
+    pointer-events: none;
+}
+.qr_expand_play
+{
+    position: absolute;
+    top: 235px;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 900;
+    pointer-events: none;
+}
+.qr_expand_forward
+{
+    position: absolute;
+    top: 235px;
+    left: 60%;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 900;
+    pointer-events: none;
+}
+.qr_expand_rewind
+{
+    position: absolute;
+    top: 235px;
+    left: 30%;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 900;
+    pointer-events: none;
+}
+.qr_expand_close
+{
+    position: absolute;
+    top: 10px;
+    left: 90%;
+    font-size: 22px;
+    color: #fff;
+    cursor: pointer;
+    pointer-events: all;
+}
+.qr_expand_download
+{
+    position: absolute;
+    top: 10px;
+    left: 5%;
+    font-size: 22px;
+    color: #fff;
+    cursor: pointer;
+    pointer-events: all;
+}

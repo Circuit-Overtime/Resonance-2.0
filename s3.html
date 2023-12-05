@@ -1,0 +1,356 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- there is an error in syncing video time with the seek  -->
+    <meta charset="UTF-8">
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-height, initial-scale=1.5">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nightangle - Resonance</title>
+    <script type="text/javascript" src="https://webqr.com/llqrcode.js"></script>
+    <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+    <script type="text/javascript" src="https://webqr.com/webqr.js"></script> 
+    <link rel="icon" href="CSS/IMAGES/resonance_logo.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="JS/mediaelement-and-player.min.js"></script>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="CSS/resonance_dash.css">
+    <link rel="stylesheet" href="CSS/single_audio.css">
+    <link rel = "stylesheet" href = "CSS/upload_zone.css">
+    <link rel="stylesheet" href="CSS/music_disp.css">
+    <link rel="stylesheet" href="CSS/playList.css">
+    <link rel="stylesheet" href="CSS/playList_mini.css">
+    <link rel="stylesheet" href="CSS/playList_mini_contract.css">
+    <link rel="stylesheet" href="CSS/top_playlist_banner.css">
+    <link rel="stylesheet" href="CSS/side_navbar.css">
+    <link rel="stylesheet" href="CSS/laterList.css">
+    <link rel = "stylesheet" href="CSS/laterListplayer.css">
+    <link rel="stylesheet" href="CSS/account.css">
+    <link rel="stylesheet" href="CSS/profile_reso.css">
+    <link rel="stylesheet" href="CSS/reso_nav.css">
+    <link rel="stylesheet" href="CSS/qr_expand.css">
+    <link rel="stylesheet" href="CSS/qr_scanner.css">
+    <link rel="stylesheet" href="CSS/mobile_resonance_view.css">
+
+    
+</head>
+<body id="body">
+ <div class="qr_code_scanner" id="qr_code_scanner">
+  <div id="mainbody">
+    <table class="tsel"  width="100%">
+    <tr>
+    <td valign="top"  width="50%">
+    <table class="tsel" >
+    <tr>
+    <td><img class="selector" id="webcamimg" src="https://webqr.com/vid.png" onclick="setwebcam()"  /></td>
+    <td><img class="selector" id="qrimg" src="https://webqr.com/cam.png" onclick="setimg()" /></td></tr>
+    <tr><td colspan="2" >
+    <div id="outdiv">
+    </div></td></tr>
+    </table>
+    </td>
+    </tr>
+    
+    <tr><td colspan="3" >
+    <div id="result"></div>
+    </td></tr>
+    </table>
+    
+    <canvas id="qr-canvas" width="800" height="600"></canvas>
+    
+    </div>
+ </div>
+  <!-- =====================================================QR CODE EXPAND===========================================================================================================================================================================  -->
+  
+  <div class="qr_expand" id="qr_expand">
+    <div class="adver_song_expand">
+      <ion-icon name="close-circle-outline" class="qr_expand_close" id="qr_expand_close"></ion-icon>
+      <ion-icon name="arrow-down-circle-outline" class="qr_expand_download" id="qr_expand_download" onclick="downloadPlaycard()"></ion-icon>
+      <img class="album_unit_player_expand" id="album_unit_player_expand">
+      <h2 class="song_name_adver_expand" id="song_name_adver_expand"></h2>
+      <p class="qr_expand_start_time"  id="qr_expand_start_time">00:00</p>
+      <p class="qr_expand_end_time" id="qr_expand_end_time">00:00</p>
+      <ion-icon name="heart-circle-outline" class="qr_expand_heart"></ion-icon>
+      <input type="range" min="" max="" id="qr_expand_seek" value="75">
+      <ion-icon name="play-circle-outline" class="qr_expand_play"></ion-icon>
+      <ion-icon name="play-skip-forward-outline" class="qr_expand_forward"></ion-icon>
+      <ion-icon name="play-skip-back-outline" class="qr_expand_rewind"></ion-icon>
+
+    <canvas id="barcode_expand"></canvas>
+    <div class="waveforms_expand" id="waveforms_expand"></div>
+
+    </div>
+  </div>
+  <!-- ====================================================SEARCH BAR================================================================================================================================================================================================================================================================ -->
+  <div class="container">
+    <input placeholder='Search...' class='js-search' type="text" id="reso_song_search" >
+    <i class="fa fa-search"></i>
+  </div>
+  <!-- ====================================================NAV PANE==========================================================================================================================================================   -->
+  <div class="navigation">
+    <ion-icon name="home" class="home_nav" data-id="home"  onclick="home_nav()"></ion-icon>
+    <ion-icon name="radio" data-id="songs" class="songs_nav" onclick="songs_nav()"></ion-icon>
+    <ion-icon name="scan" class="reso_scan" data-id="reso_scan" onclick="scan_nav()"></ion-icon>
+
+  </div>
+<!-- ===========================================CREATE PLAYLIST HOLDER=========================================================================================================================================================== -->
+  <div class="create_playlist" id="create_playlist">
+    <i class="fa-solid fa-heart" id="add_folder_icon"></i>
+    <input type="text" class="playlist_name" id="playlist_name" maxlength="22">
+    <input type="button" class="playlist_create" id="playlist_create" value="✔">
+    <input type="button" class="playlist_create_cancel" id="playlist_create_cancel" value="❌">
+    <p class="error_playlist_create" id="error_playlist_create">Opps! Name of the playlist should be atleast 6 characters or atmost 22 characters.</p>
+</div>
+<!-- ===============================================PLAYLIST SECTION=========================================================================================================================================================  -->
+<ion-icon name="reorder-three" class = "expand_nav_bar"></ion-icon>  
+<div class="side_navbar" id="side_navbar" >
+    <ion-icon name="close-circle" id="close_nav_bar"></ion-icon>
+    <button class="add_playList" id="add_playList"><ion-icon name="add" class="add_playList_icon" ></ion-icon></button>
+    <button class="playlist_popup" id="playlist_popup"><ion-icon name="headset" title="Your Playlist"></ion-icon></button>
+    <button class="laterList" id="laterList"><ion-icon name="heart"></ion-icon></button>
+
+    <h2 class="my_playlists" id="my_playlists"> My Playlists</h2>
+    <div class="existing_playlists" id="existing_playlists"></div>
+    <div class="deleteCountDown" id="deleteCountDown">
+    </div>
+</div>
+
+<!-- =============================================TOP - PLAYLISTS===========================================================================================================================================================  -->
+  <div class="top_playlist_banner" id="top_playlist_banner"></div>
+<!-- ===========================================USER PROFILE ZONE=============================================================================================================================================================  -->
+    <div class="logo" id="logo"></div>
+    <button class="upload_music" id="upload_music"><ion-icon name="cloud-upload" title="Upload"></ion-icon></button>
+    
+    
+    <div class="laterList_container" id="laterList_container">
+      <ion-icon name="close-circle" id="close_laterList_ico" onclick="close_laterList()"></ion-icon>
+      <h2 class="laterList_name_disp" id="laterList_name_disp"> <i class="fa-solid fa-headphones-simple fa-duotone fa- fa-shake"></i>  My Enjoy Later</h2>
+    </div> 
+
+    <div class="main_container" id="main_container">
+    </div>
+
+      
+  <ion-icon name="arrow-forward-circle" id="caret_main_container_right"  onclick="shiftRight()"></ion-icon>
+  <ion-icon name="arrow-back-circle" id="caret_main_container_left" onclick="shiftLeft()"></ion-icon>
+
+<!-- ================================UPLOAD ZONE (TO BE REMOVED)======================================================================================================================================================================= -->
+
+<div class="main_upload_zone" id="main_upload_zone">
+      <h2 class="song_name_label" id="song_name_label">Give your new song a name</h2>
+      <input type="text" class="song_name" id="song_name">
+      <!-- <h2 class="song_genre_label" id="song_genre_label">Select a Genre: </h2> -->
+      <article class="feature1">
+          <input type="checkbox" id="feature1" class="genreCheckBox" name="genres" value="Romantic Song"/>
+          <div>
+            <span>
+              Romantic<br/>
+              Song
+            </span>
+          </div>
+        </article>
+        
+        <article class="feature2">
+          <input type="checkbox" id="feature2" class="genreCheckBox" name="genres" value="Breakup Song"/>
+          <div>
+            <span>
+              Breakup<br/>
+              Song
+            </span>
+          </div>
+        </article>
+        
+        <article class="feature3">
+          <input type="checkbox" id="feature3" class="genreCheckBox" name="genres" value="Remix Version"/>
+          <div>
+            <span>
+              Remix <br/>
+              Version
+            </span>
+          </div>
+        </article>
+        
+        <article class="feature4">
+          <input type="checkbox" id="feature4" class="genreCheckBox" name="genres" value="Soothing Relaxing" />
+          <div>
+            <span>
+              Soothing<br/>
+              Relaxing
+            </span>
+          </div>
+        </article>
+        <h2 class="song_artist_label" id="song_artist_label">Your Artistic Name (You haven't set it yet)</h2>
+        <h2 class="artist_name" id="artist_name">ft.</h2>
+        <input type="text" class="song_artist_name" id="song_artist_name">
+        <div class="song_names_uploading" id="song_names_uploading">
+          
+        </div>
+        
+        <button class="upload_music_unit" id="upload_music_unit">Upload</button>
+        </div>
+
+<!-- ================================================SINGLE MUSIC PLAYER======================================================================================================================       -->
+    
+        <div id="wrapper">
+          <div id='player'>
+          <audio id="music_player">
+          <source src=""/>
+          </audio>
+          <ion-icon name="play" onclick="play_aud()" id="play_button" class="play_button"></ion-icon>
+          <ion-icon name="pause"  onclick="pause_aud()" id="play_button" class="pause_button"></ion-icon>
+          <!-- <ion-icon name="stop" onclick="stop_aud()" id="play_button"></ion-icon> -->
+          <p class="current_time_unit" id="current_time_unit">00:00</p>
+          <p class="total_time_unit" id="total_time_unit">00:00</p>
+
+          <div class="adver_song">
+            <img class="album_unit_player" id="album_unit_player">
+          <canvas id="barcode" onclick="generate_card()"></canvas>
+          <div class="waveforms" id="waveforms">
+          </div>
+
+          </div>
+          <input type="range" id="change_seek" value="0" max="" step="1" class="change_seek" onchange="shiftSeekUnit()">
+          <input type="range" id="change_vol" onchange="change_vol()" step="1" min="0" max="100" value="75" class="change_vol">
+            <h2 id="music_unit_name_displayed"></h2>
+            <ion-icon name="close-circle" id="close_unit_music_player"></ion-icon>
+          </div>
+          </div>
+
+<!-- =================================================PLAYLIST=================================================================================================================-->
+          
+<div class="playList" id="playList">
+  
+            <div class="playlist_doesnot_exist">
+              <img src="CSS/IMAGES/does_not_exists.png" class="no_playlist_img" id="no_playlist_img">
+            </div>
+            
+          </div>
+         
+          <div class="playlist_player" id="playlist_player">
+            <ion-icon name="close-circle" class="close_playlist"  id="close_playlist" onclick="closePlayList()"></ion-icon>
+            <ion-icon name="caret-down" class="playlist_player_contract" id="playlist_player_contract" onclick="contract()"></ion-icon>
+            
+            <div class="playlist_player_album">
+              <img src="" id="playlist_player_album_src">
+            </div>
+            <h2 class="playlist_player_name" id="playlist_player_name"></h2>
+            <h2 class="playlist_player_artist" id="playlist_player_artist"></h2>
+            <div class="controls">
+              <ion-icon name="repeat" id="playlist_player_repeat" onclick="repeatSong()">
+              </ion-icon><span id="PlayListrepeat_number"></span>
+            <ion-icon name="play-skip-forward" class="playlist_player_back" id="playlist_player_back"></ion-icon>
+            <ion-icon name="play" class="playlist_player_play" id="playlist_player_play"  ></ion-icon>
+            <ion-icon name="pause" class="playlist_player_pause" id="playlist_player_pause" ></ion-icon>
+            <ion-icon name="play-skip-back" class="playlist_player_fast" id="playlist_player_fast"></ion-icon>
+            <p class="current_time" id="current_time">00:00</p>
+            <p class="total_time" id="total_time">00:00</p>
+            <input type="range" id="seek" value="0" max="259" step="1" class="playlist_player_seek" id="playlist_player_seek" onchange="shiftTime()">
+            <input type="range" id="playlist_player_vol" onchange="change_playList_vol()" step="1" min="0" max="100" value="50" class="playlist_player_vol">
+            <audio controls id="audio_player" preload="metadata"></audio>
+          </div>
+            
+        </div>
+<!-- ====================================================LISTEN LATER================================================================================================================================================================-->
+        <div class="laterList_player contract" id="laterList_player">
+          <ion-icon name="close-circle" class="closeLaterList"  id="closeLaterList" onclick="closeLaterList()"></ion-icon>
+          
+          <div class="laterList_player_album">
+            <img src="" id="laterList_player_album_src">
+          </div>
+          <h2 class="laterList_player_name" id="laterList_player_name"></h2>
+          <h2 class="laterList_player_artist" id="laterList_player_artist"></h2>
+          <div class="controls_later">
+          <ion-icon name="play-skip-forward" class="playlist_player_fast_later" id="playlist_player_fast_later"></ion-icon>
+          <ion-icon name="play" class="playlist_player_play_later" id="playlist_player_play_later"  ></ion-icon>
+          <ion-icon name="pause" class="playlist_player_pause_later" id="playlist_player_pause_later" ></ion-icon>
+          <ion-icon name="play-skip-back" class="playlist_player_back_later" id="playlist_player_back_later"></ion-icon>
+          <p class="current_time_later" id="current_time_later">00:00</p>
+          <p class="total_time_later" id="total_time_later">00:00</p>
+          <input type="range" id="seek_later" value="0" max="259" step="1" class="laterList_player_seek_later" id="playlist_player_seek_later" onchange="shiftTime_later()">
+          <input type="range" id="playlist_player_vol_later" onchange="change_playList_vol_later()" step="1" min="0" max="100" value="50" class="playlist_player_vol_later">
+          <audio controls id="audio_player_later" preload="metadata"></audio>
+        </div>
+
+      </div>
+<!-- ================================================USER ACCOUNTS SECTION======================================================================================================================================== -->
+      <div class="usr_profile" id="usr_profile">
+        <div class="usr_profile_pic" id="usr_profile_pic" title="">
+        <!-- <ion-icon name="person-outline" class="account_section"></ion-icon> -->
+        <img  class="profile_pic_reso" id="profile_pic_reso">
+      </div>
+        <h2 id="displayNameResonance" title="username"> </h2> <!-- can take upto 21 chars in space-->
+        <img src="CSS/IMAGES/resonance verified.png" class="user_verified_resonance" id="user_verified_resonance" title="Artist Channel">
+        <ion-icon name="caret-back-outline" class="expand_account"></ion-icon>
+      </div>
+      <div class="options_accounts" id="options_accounts">
+        <input type="button" value="Account" onclick="" id="reso_Account"> 
+        <ion-icon name="caret-forward-outline" class="accounts_forward_reso"></ion-icon>
+        <input type="button" value="Profile" onclick="reso_Profile()" id="reso_Profile">
+        <input type="button" value="Devs Zone" onclick="reso_Settings()" id="reso_Settings">
+        <hr>
+        <input type="button" value="Signout" onclick="reso_Signout()" id="reso_Signout">
+
+      </div>
+<!-- ==================================================USER PROFILE===============================================================================================================================================================  -->
+      <div class="profile_section" id="profile_section">
+        <div class="usr_pofile_upload_resonance_progress" id="usr_pofile_upload_resonance_progress"></div>
+        <ion-icon name="close-circle" class="close_profile_section" id="close_profile_section"></ion-icon>
+        <div class="profile_edit_image" id="profile_edit_image" onclick="uploadUserDP()">
+          <img class="profile_image_reso" id="profile_image_reso">
+        </div>
+        <h2 class="profile_head"> Profile</h2>
+        <!-- <h2 class="profile_name" id="profile_name"> Ayushman </h2> -->
+
+        <div class="field field_v2" id="name_edit_field">
+          <!-- <label for="first-name" class="ha-screen-reader">Resonance Name</label> -->
+          <input id="first-name"  class="field__input" placeholder="" maxlength="15"  spellcheck="false">
+          <span class="field__label-wrap" aria-hidden="true">
+            <!-- <span class="field__label">Resonance Name</span> -->
+          </span>
+        </div>
+
+        <input type="button" class="bn632-hover bn26" id="save_reso_name_edit" value="Save">
+        <p class="declaration_creds">Special thanks to rajannya.rosy@gmail.com  for managing and uploading songs to the Resonance Songs Library</p>
+        <p class="success_error_reso" id="success_error_reso"></p>
+        <p class="declaration">By Changing the profile image, you agree to give Resonance the access to the image (recommended 270 x 270) you choose to upload. Please make sure you have the right image to upload.</p>
+      </div>
+
+<!-- ================================================RIGHT CLICK VOUCH==========================================================================================================================================================================================  -->
+
+      <p id="rightClickVouch" class="rightClickVouch"></p>
+
+<!-- ================================================SCRIPTS==========================================================================================================================================================================================  -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+    <script src="JS/reso_nav.js"></script>
+    <script src="JS/qrious.min.js"></script>
+    <script src="JS/JsBarcode.all.min.js"></script>
+    <script src="JS/upload_music.js"></script>
+    <script src="JS/song_list.js"></script>
+    <script src="JS/create_playList.js"></script>
+    <script src="JS/fetch_songs.js"></script>
+    <script  src="JS/single_audio_unit.js"></script>
+    <script src="JS/laterList.js"></script>
+    <script src="JS/accounts.js"></script>
+    <script src="JS/profile_edit.js"></script>
+    <script src="JS/playList_featureReso.js"></script>
+    <!-- <script src="JS/ResonancescanAndPlay.js"></script> -->
+    <script src = "JS/deleteThisPlayList.js"></script>
+    <script type="text/javascript" src="JS/PatchContextMenu.js"></script>
+    
+</body>
+</html>
+
+<!-- shampasharma05@gmail.com?  -->
+
+<!-- scan policy and the profile section left  -->
+

@@ -1,0 +1,195 @@
+.dsgn
+{
+    position: absolute;
+    /* background: url("gears.png"); */
+    height: 600px;
+    width: 600px;
+    z-index: 50;
+    left: 50%;
+    top: 20px;
+    background-size: cover;
+    filter: blur(0px);
+}
+.circuit
+{
+    position: absolute;
+    /* background: url("circuit.png"); */
+    height: 600px;
+    width: 600px;
+    z-index: 50;
+    left: 5.5%;
+    top: 26%;
+    background-size: cover;
+    filter: blur(0px);
+    transform: scale(.8) rotate(-90deg);
+}
+.floatingSquareOne /*green*/
+{
+	position: absolute;
+	top: 45%;
+	left: 57%;
+	height: 300px;
+	width: 300px;
+	border-radius: 15px;
+	background: linear-gradient(-180deg, #f5b030, #796300);
+	filter: blur(20px);
+	animation: moveup 2s linear infinite;
+}
+.floatingSquareTwo /*orange*/
+{
+	position: absolute;
+	top: 10%;
+	left: 25%;
+	height: 300px;
+	width: 300px;
+	border-radius: 15px;
+	background: linear-gradient(-180deg, #3b1d00, #ffae52);
+	filter: blur(20px);
+	animation: movedown 2s linear infinite;
+    z-index: -2;
+}
+@keyframes moveup
+{
+	0%,100%
+	{
+		transform: translateX(-40px);
+	}
+	50%
+	{
+		transform: translateX(40px);
+	}
+}
+@keyframes movedown
+{
+	0%,100%
+	{
+		transform: translateX(40px);
+	}
+	50%
+	{
+		transform: translateX(-40px);
+	}
+}
+#passwd_toogle_login
+{
+	position: absolute;
+	top: 205px;
+	left: 90%;
+	color: #fff;
+}
+#passwd_toogle_register
+{
+	position: absolute;
+	top: 55%;
+	left: 90%;
+	color: #fff;
+}
+#passwd_toogle_register_conf
+{
+	position: absolute;
+	top: 68%;
+	left: 90%;
+	color: #fff;
+}
+
+.register_message
+{
+	position: absolute;
+	font-size: 10em;
+	z-index: 100;
+	color: #fff;
+	letter-spacing: 12px;
+	transform: scale(0);
+	opacity: 0%;
+
+}
+
+@keyframes grow {
+	0%
+	{
+		transform: scale(0);
+		opacity: 10%;
+	}
+	25%
+	{
+		transform: scale(0.5);
+		opacity: 30%;
+	}
+	50%
+	{
+		transform: scale(0.9);
+		opacity: 40%;
+	}
+	75%
+	{
+		transform: scale(1.5);
+		opacity: 100%;
+	}
+	100%
+	{
+		transform: scale(1.2);
+		opacity: 100%;
+	}
+}
+
+@keyframes shrink {
+	0%
+	{
+	
+
+		transform: scale(1.2);
+		opacity: 100%;
+	}
+	25%
+	{
+		transform: scale(1.5);
+		opacity: 100%;
+	}	
+	50%
+	{
+		transform: scale(0.9);
+		opacity: 40%;
+	}
+	75%
+	{
+	transform: scale(0.8);
+		opacity: 30%;
+	}
+	100%
+	{
+		transform: scale(0.5);
+		opacity: 0%;
+	}
+}
+.creds
+{
+	position: absolute;
+	top: 96%;
+	width: 97%;
+	left: 48%;
+	z-index: 100;
+}
+.creds strong
+{
+	color: #da0024;
+}
+.creds a
+{
+	color: #3b1d00;
+	text-decoration: none;
+	font-weight: 700;
+
+}
+
+#rightClickVouch
+{
+    position: absolute;
+    color: #888;
+    top: var(--top_position);
+    left: var(--left_position);
+    font-family: 'Zeyada', cursive;
+    font-size: 18px;
+    transition: .25s;
+    opacity: 0;
+    transform: rotate(var(--rotate_value));
+}

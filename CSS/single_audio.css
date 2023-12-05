@@ -1,0 +1,388 @@
+:root
+{
+  --song_prog : 0;
+}
+#wrapper
+{
+ text-align:center;
+ margin:0 auto;
+ padding:0px;
+ width: 995px;
+ z-index: 1000;
+ /* background-color: #fff; */
+
+}
+#player
+{
+    position: absolute;
+    top: 91%;
+    height: 65px;
+ width: 100%;
+ /* margin-left:300px; */
+ left: 0%;
+ padding:5px;
+ box-sizing:border-box;
+background-color: rgb(0, 0, 0);
+ border-radius: 12px;
+ transition: 0.5s;
+ transform: translateY(200px);
+
+}
+.play_button
+{
+ float:left;
+ height: 42px;
+ width: 42px;
+ justify-content: center;
+ align-items: center;
+ border-radius: 50%;
+ margin-left:2px;
+ margin-right:5px;
+ margin-top:2px;
+ font-size: 56px;
+ transition: 0.25s;
+ color: rgb(0, 0, 0);
+ background-color: rgb(30, 255, 0);
+ opacity: .25;
+ pointer-events: none;
+}
+
+.pause_button
+{
+position: relative;
+height: 42px;
+ width: 42px;
+ float:left;
+ top: 2px;
+ height: 40px;
+ left: -49px;
+ font-size: 60px;
+ pointer-events: none;
+    transition: 0.25s;
+    opacity: 0;
+    color: rgb(0, 0, 0);
+    border-radius: 50%;
+ background-color: rgb(30, 255, 0);
+}
+
+
+#change_vol
+{
+top: 25px;
+width: 250px;
+position: relative;
+left: 270px;
+-webkit-appearance: none;
+background: #1eff00; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 1; /* Set transparency (for mouse-over effects on hover) */
+  border-radius: 25px;
+ transition: 0.5s;
+ height: 5px;
+}
+#change_vol::-webkit-slider-thumb
+{
+  -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 15px; /* Set a specific slider handle width */
+    height: 15px; /* Slider handle height */
+    background: rgb(221, 221, 221); /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+
+
+.everlib-logo {
+    display: inline-block;
+    cursor: pointer;
+    background: transparent;
+    position: absolute;
+    left: 90px;
+    transition: 0.5s;
+    opacity: 0;
+}
+    
+    .everlib-logo-first-bar,
+    .everlib-logo-second-bar,
+    .everlib-logo-third-bar,
+    .everlib-logo-fourth-bar {
+      position: relative;
+
+      display: inline-block;
+     top: -2px;
+      width: 4px;
+      margin-right: 2px;
+      transition: .5s;
+      animation: equalize 4s 0s infinite;
+      animation-timing-function: linear;
+      animation-play-state: running;
+      opacity: 1;
+      vertical-align: top;
+      opacity: .75;
+    }
+    
+    .everlib-logo-first-bar {
+      height: 40px;
+      background: #2bff00;
+      transition: 0.5s;
+      animation-delay: -1.9s;
+    }
+    
+    .everlib-logo-second-bar {
+      height: 48px;
+      background: #00d346;
+      animation-delay: -2.9s;
+    }
+    
+    .everlib-logo-third-bar {
+      height: 44px;
+      background: #00800b;
+      animation-delay: -3.9s;
+    }
+    
+    .everlib-logo-fourth-bar {
+      height: 36px;
+      background: #007206;
+      animation-delay: -4.9s;
+    }
+  
+  
+    
+  @keyframes equalize {
+    0% {
+      height: 48px;
+      filter: hue-rotate(120deg);
+    }
+    4% {
+      height: 42px;
+    }
+    8% {
+      height: 40px;
+    }
+    12% {
+      height: 30px;
+    }
+    16% {
+      height: 20px;
+    }
+    20% {
+      height: 30px;
+    }
+    24% {
+      height: 40px;
+    }
+    28% {
+      height: 10px;
+    }
+    32% {
+      height: 40px;
+      filter: hue-rotate(2deg);
+    }
+    36% {
+      height: 48px;
+      filter: hue-rotate(120deg);
+    }
+    40% {
+      height: 20px;
+    }
+    44% {
+      height: 40px;
+      filter: hue-rotate(2deg);
+    }
+    48% {
+      height: 48px;
+      filter: hue-rotate(120deg);
+    }
+    52% {
+      height: 30px;
+    }
+    56% {
+      height: 10px;
+    }
+    60% {
+      height: 30px;
+      filter: hue-rotate(2deg);
+    }
+    64% {
+      height: 48px;
+      filter: hue-rotate(120deg);
+    }
+    68% {
+      height: 30px;
+      filter: hue-rotate(2deg);
+    }
+    72% {
+      height: 48px;
+      filter: hue-rotate(120deg);
+    }
+    76% {
+      height: 20px;
+      filter: hue-rotate(2deg);
+    }
+    80% {
+      height: 48px;
+      filter: hue-rotate(120deg);
+    }
+    84% {
+      height: 38px;
+      filter: hue-rotate(2deg);
+    }
+    88% {
+      height: 48px;
+      filter: hue-rotate(120deg);
+    }
+    92% {
+      height: 20px;
+      filter: hue-rotate(2deg);
+    }
+    96% {
+      height: 48px;
+      filter: hue-rotate(120deg);
+      filter: hue-rotate(2deg);
+    }
+    100% {
+      height: 48px;
+      filter: hue-rotate(120deg);
+    }
+  }
+  #music_unit_name_displayed
+  {
+    position: absolute;
+    left: 5%;
+    top: -31px;
+    color: #fff;
+    transition: 0.5s;
+    font-size: 14px;
+    width: 90%;
+    overflow: hidden;
+    float: right;
+    background-color: transparent;
+  }
+
+  #close_unit_music_player
+  {
+    position: absolute;
+    left: 95%;
+    top: 15px;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+  }
+
+
+  #change_seek
+{
+top: -10px;
+width: 98%;
+left: 1%;
+position: absolute;
+height: 5px;
+-webkit-appearance: none;
+background: #09ff00; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 1; /* Set transparency (for mouse-over effects on hover) */
+  border-radius: 25px;
+ transition: 0.5s;
+}
+#change_seek::-webkit-slider-thumb
+{
+  -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 15px; /* Set a specific slider handle width */
+    height: 15px; /* Slider handle height */
+    background: rgb(0, 0, 0); /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 5px;
+    transition: 0.5s;
+}
+.current_time_unit
+{
+  position: absolute;
+  color: #fff;
+  left: 1%;
+  top: -32px;
+  font-size: 14px;
+}
+.total_time_unit
+{
+  position: absolute;
+  color: #fff;
+  top: -32px;
+  left: 96%;
+  font-size: 14px;
+  
+}
+.adver_song
+{
+  position: absolute;
+  height: 50px;
+  width: 93%;
+  left: 5%;
+  background-color: transparent;
+}
+
+.adver_song::before
+{
+  content: '';
+  position: absolute;
+  height: 49px;
+  width: 49px;
+  left: 12px;
+  top: 2%;
+  border-radius: 50%;
+  /* background-color: #ffffff; */
+}
+
+#album_unit_player
+{
+  content: '';
+  position: absolute;
+  height: 38px;
+  width: 38px;
+  left: 18%;
+  top: 17%;
+  border-radius: 50%;
+  background-color: #ffffff;
+  background-position: center;
+  background-size: cover;
+}
+
+#barcode
+{
+  position: absolute;
+  background-color: transparent;
+  height: 40px;
+  top: 1px;
+  width: auto;
+  left: 1%;
+  transition: 0.5s;
+  overflow: hidden;
+  cursor: pointer;
+  /* border-radius: 50%; */
+}
+.waveforms
+{
+  position: absolute;
+  top: 7px;
+  left: 5.5%;
+  height: 40px;
+  width: 30%;
+  background-color: transparent;
+  display: flex;
+  transition: 0.5s;
+}
+.waveforms .waveform
+{
+  position: relative;
+  margin-right: 3px;
+  height: 35px;
+  background-color: #ffffff;
+  width: 4px;
+  top: 2.5px;
+  left: 0;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+

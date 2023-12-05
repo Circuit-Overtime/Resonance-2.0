@@ -1,0 +1,166 @@
+.playList
+{
+    position: absolute;
+    width: 90%;
+    height: 80vh;
+    background-color: rgba(0, 0, 0, 0.336);
+    backdrop-filter: blur(25px);
+    z-index: 10000;
+    top: 10%;
+    left: 6%;
+    border-radius: 20px;
+    max-height: 80vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transform: translateX(-1800px); /*-1400px*/
+    transition: 0.5s;
+}
+
+.playList.active
+{
+    position: absolute;
+    width: 90%;
+    height: 80vh;
+    background-color: rgba(0, 0, 0, 0.336);
+    backdrop-filter: blur(25px);
+    z-index: 10000;
+    top: 10%;
+    left: 6%;
+    border-radius: 20px;
+    max-height: 80vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    transform: translateX(0px);
+}
+#deleteThisPlayListSong
+{
+    position: relative;
+    top: 38px;
+    left: 0px;
+    font-size: 20px;
+    color: red;
+}
+.playlist_name_disp
+{
+    position: relative;
+    top: 10px;
+    left: 15px;
+    color: aliceblue;
+    font-size: 15px;
+    margin-bottom: 20px;
+
+}
+.playlist_name_disp i
+{
+    position: relative;
+    top: 0px;
+    margin-right: 24px;
+    left: 15px;
+    color: aliceblue;
+
+}
+.playList::-webkit-scrollbar
+{
+    background-color: transparent;
+}
+.playList_songs
+{
+    position: relative;
+    height: 80px;
+    width: 100%;
+    background-color: transparent;
+    top: 20px;
+    display: flex;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+.playList_songs .playlist_song_album
+{
+    position: relative;
+    height: 65px;
+    width: 65px;
+    top: 7.5px;
+    left: 7px;
+    border-radius: 20px;
+    background-color: aliceblue;
+    /* box-shadow: 0 0 5px #0f0; */
+    justify-content: stretch;
+    flex-wrap: wrap;
+
+}
+
+.playList_songs .playlist_song_album img
+{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    background-position: center;
+}
+.playList_songs .playlist_song_name
+{
+    position: absolute;
+    left: 85px;
+    top: 12px;
+    color: aliceblue;
+
+}
+.playList_songs .playlist_song_artist
+{
+    position: absolute;
+    left: 86px;
+    top: 46px;
+    text-transform: capitalize;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+}
+.div_break
+{
+    position: relative;
+    top: 76px;
+    height: 2px;
+    width: 80%;
+    left: 2%;
+    background-color: rgba(250, 235, 215, 0.582);
+    border-radius: 2px;
+}
+.playList_songs .expand_playlist_song
+{
+    position: absolute;
+    top: 30px;
+    left: 87%;
+    font-size: 34px;
+    color: rgb(0, 255, 55);
+    cursor: pointer;
+}
+.playlist_doesnot_exist
+{
+    position: absolute;
+    top: 10%;
+    left: 35%;
+
+}
+.no_playlist_img
+{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-size: cover;
+    display: none;
+}
+#Shuffle_PlayList
+{
+    position: absolute;
+    left: 95%;
+    top: 20px;
+    cursor: pointer;
+}
+#PlayPlaylist
+{
+    position: absolute;
+    left: 93%;
+    top: 20px;
+    cursor: pointer;
+    color: #0f0;
+}

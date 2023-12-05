@@ -1,0 +1,273 @@
+@media screen and (max-width: 767px){
+    .register
+    {
+        top: -20px;
+        position: relative;
+        width: 100%;
+        padding: 40px 40px 60px;
+        border-radius: 10px;
+        text-align: center;
+        left:1%;
+        transition: 1s;
+        opacity: 0;
+        z-index: 0;
+        float: right;
+        transform: translateY(750px);
+    
+        
+    }
+    .register::before
+    {
+        content: '';
+        position: absolute;
+        top: -2px;
+        right: -2px;
+        bottom: -2px;
+        left: -2px;
+        /* background: linear-gradient(315deg,#e91e63,#5d02ff); */
+        z-index: -1;
+        transform: skew(2deg,1deg);
+        border-radius: 10px;
+    }
+    .register h2
+    {
+        left: -18%;
+        position: relative;
+        color: rgb(124, 39, 0);
+        font-weight: 500;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        font-size: 3em;
+    }
+    .register .input
+    {
+        margin-top: 40px;
+        text-align: left;
+    }
+    .register .input .inputBox
+    {
+        margin-top: 10px;
+        transition: 0.5s;
+    }
+    .register .input .inputBox label
+    {
+        display: block;
+        color: rgb(48, 0, 0);
+        margin-bottom: 5px;
+        font-size: 18px;
+        letter-spacing: 1px;
+    }
+    .register .input .inputBox input
+    {
+        position: relative;
+        width: 100%;
+        height: 40px;
+        border: none;
+        outline: none;
+        padding: 5px 15px;
+        background: transparent;
+        border-bottom: 2px solid #00ff7b;
+        color: rgb(20, 0, 109);
+        font-size: 18px;
+    }
+    .register .input .inputBox input[type="submit"]
+    {
+        cursor: pointer;
+        margin-top: 20px;
+        letter-spacing: 1px;
+        transition: 0.5s;
+        background:linear-gradient(90deg,#5d02ff,#e91e63) ;
+        border: none;
+        color: #00ff7b;
+    }
+    .register .input .inputBox input[type="submit"]:hover
+    {
+        box-shadow: 0 0 10px #e91e63;
+        background:linear-gradient(90deg,#5d02ff,#e91e63) ;
+        
+    }
+    .register .input .inputBox input[type="submit"]:active
+    {
+        color: rgba(255, 255, 255, 0.521);
+        background:linear-gradient(315deg,#e91e6271,#5f02ff8c) ;
+    }
+    .forgot
+    {
+        margin-top: 10px;
+        color: #fff;
+        font-size: 14px;
+        letter-spacing: 1px;
+    }
+    .forgot a
+    {
+        color: #ff0800;
+    }
+    .signin
+    {
+        color:#001769;
+        font-weight: 700;
+    
+    }
+    .signin a
+    {
+        color: #235700;
+        text-decoration: none;
+    }
+    .error_reg
+    {
+        position: relative;
+        color: rgb(250, 61, 18);
+        top: 0px;
+        font-size: 12px;
+    
+    }
+    .error_reg u
+    {
+        color: red;
+    }
+
+    /* ----------------------------------------------------------------------------------------------------------------- */
+
+.floatingSquareOne /*green*/
+{
+	position: absolute;
+	top: 45%;
+	left: 57%;
+	height: 300px;
+	width: 300px;
+	border-radius: 15px;
+	background: linear-gradient(-180deg, #f5b030, #796300);
+	filter: blur(20px);
+	animation: moveup 2s linear infinite;
+    display: none;
+}
+.floatingSquareTwo /*orange*/
+{
+	position: absolute;
+	top: 10%;
+	left: 25%;
+	height: 300px;
+	width: 300px;
+	border-radius: 15px;
+	background: linear-gradient(-180deg, #3b1d00, #ffae52);
+	filter: blur(20px);
+	animation: movedown 2s linear infinite;
+    z-index: -2;
+    display: none;
+}
+@keyframes moveup
+{
+	0%,100%
+	{
+		transform: translateX(-40px);
+	}
+	50%
+	{
+		transform: translateX(40px);
+	}
+}
+@keyframes movedown
+{
+	0%,100%
+	{
+		transform: translateX(40px);
+	}
+	50%
+	{
+		transform: translateX(-40px);
+	}
+}
+#passwd_toogle_login
+{
+	position: absolute;
+	top: 220px;
+	left: 75%;
+    transition: 0.5s;
+	color: #fff;
+}
+#passwd_toogle_register
+{
+	position: absolute;
+	top: 55%;
+	left: 90%;
+	color: #fff;
+}
+#passwd_toogle_register_conf
+{
+	position: absolute;
+	top: 68%;
+	left: 90%;
+	color: #fff;
+}
+
+.register_message
+{
+	position: absolute;
+	font-size: 3em;
+	z-index: 100;
+	color: #fff;
+	letter-spacing: 12px;
+	transform: scale(0);
+	opacity: 1;
+
+}
+
+@keyframes grow {
+	0%
+	{
+		transform: scale(0);
+		opacity: 10%;
+	}
+	25%
+	{
+		transform: scale(0.5);
+		opacity: 30%;
+	}
+	50%
+	{
+		transform: scale(0.9);
+		opacity: 40%;
+	}
+	75%
+	{
+		transform: scale(1.5);
+		opacity: 100%;
+	}
+	100%
+	{
+		transform: scale(1.2);
+		opacity: 100%;
+	}
+}
+
+@keyframes shrink {
+	0%
+	{
+	
+
+		transform: scale(1.2);
+		opacity: 100%;
+	}
+	25%
+	{
+		transform: scale(1.5);
+		opacity: 100%;
+	}	
+	50%
+	{
+		transform: scale(0.9);
+		opacity: 40%;
+	}
+	75%
+	{
+	transform: scale(0.8);
+		opacity: 30%;
+	}
+	100%
+	{
+		transform: scale(0.5);
+		opacity: 0%;
+	}
+}
+}
+

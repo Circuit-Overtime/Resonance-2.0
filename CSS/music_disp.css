@@ -1,0 +1,154 @@
+:root
+{
+    --album_gradient : "";
+}
+.main_container 
+{
+    position: absolute;
+    height: 270px;
+    width: 82%;
+    top: 46%;
+    left: 16%;
+    background-color: transparent;
+    display: flex;
+    max-width: 84%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    transition: 0.5s;
+    border-radius: 20px;
+    padding-left: 15px;
+    padding-right: 5px;
+    scroll-behavior: smooth;
+    z-index: 1003;
+}
+.main_container::-webkit-scrollbar
+{
+    background-color: transparent;
+}
+.music_unit
+{
+    position: relative; 
+    height: 240px;
+    width: 200px;
+    min-width: 220px;
+    transition: 0.5s;
+    top: 10px;
+    left: 20px;
+    background: rgb(31, 31, 31);
+    margin-right: 25px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    border-radius: 15px;
+    box-shadow: 0 0 16px rgb(22, 22, 22);
+    overflow: hidden;
+}
+.album_image
+{
+    position: absolute;
+    height: 63%;
+    left: 18%;
+    top: 20px;
+    width: 65%;
+    /* background: url("https://firebasestorage.googleapis.com/v0/b/chat-c774b.appspot.com/o/0A%20NightAngle%20Assets%2Fdef%20logo.jpg?alt=media&token=2acb6b5b-c634-4927-b029-d107913efe00"); */
+    background-size: cover;
+    background-size: cover;
+    background-position: center;
+    /* border-radius: 15px; */
+    
+}
+.album_image img
+{
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    
+}
+.music_unit:before
+{
+    content: '';
+    position: absolute;
+    z-index: 10;
+    top: 75%;
+    height: 70px;
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+    backdrop-filter: blur(15px);
+    opacity: 75%;
+    display: flex; 
+    /* border-radius: 20px; */
+}
+
+.unit_song_name
+{
+    position: absolute;
+    top: 76%;
+    width: 70%;
+    font-family: "Calibri";
+    z-index: 11;
+    left: 5px;
+    font-size: 14px;
+    color: rgb(60, 255, 0);
+}
+
+.unit_song_artist
+{
+    position: absolute;
+    top: 85%;
+    font-family: "Calibri";
+    z-index: 11;
+    left: 5px;
+    color: rgb(105, 105, 105);
+    text-transform: capitalize;
+}
+
+
+#add_playlist
+{
+    position: absolute;
+    top: 78%;
+    left: 85%;
+    z-index: 12;
+    cursor: pointer;
+    color: rgb(0, 255, 64);
+    font-size: 35px;
+}
+
+#add_laterlist
+{
+    position: absolute;
+    top: 78%;
+    left: 70%;
+    z-index: 12;
+    cursor: pointer;
+    color: #fff;
+    font-size: 35px;
+}
+
+
+#caret_main_container_right
+{
+    position: absolute;
+    color: rgb(0, 255, 64);
+    font-size: 64px;
+   cursor: pointer;
+   top: 62%;
+   transition: 0.5s;
+   left: 94%;
+   z-index: 1002;
+
+   /*changes_made*/
+   display: none;
+}
+#caret_main_container_left
+{
+    position: absolute;
+    color: rgb(0, 255, 64);
+    font-size: 64px;
+   cursor: pointer;
+   top: 62%;
+   transition: 0.5s;
+   left: 16%;
+   z-index: 1002 ;
+   /*changes_made*/
+   display: none;
+}

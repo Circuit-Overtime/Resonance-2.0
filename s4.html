@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resonance Developer Dashboard</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="stylesheet" href="CSS/reso_button_upload.css">
+    <link rel="stylesheet" href="CSS/reso_about_disp.css">
+    <link rel="stylesheet" href="CSS/reso_table_disp_admin.css" >
+
+    <link rel="stylesheet" href="CSS/reso_table_mobileView.css">
+    <link rel="stylesheet" href="CSS/reso_extras_mobileView.css">
+    <link rel="icon" href="https://firebasestorage.googleapis.com/v0/b/chat-c774b.appspot.com/o/0A%20NightAngle%20Assets%2FRDD%20logo.ico?alt=media&token=0396a422-7fdd-43e8-9c85-db52645077fe"></head>
+<body>
+
+
+  
+<div class="maintenance_or_deny" id="maintenance_or_deny">
+  <ion-icon name="alert-circle" class="maintenance_or_deny_ico"></ion-icon>
+ <h2 class="maintenance_or_deny_desc">This site is only applicable for <strong> Resonance Developers (your permission might have been taken out)</strong>,  the access is thus deinied from all others. If you have requested for being a developer you need to await response, until the request has been accepted or denied!</h2>
+ <h2 class="exit_countdown">Sorry Redirecting You to the Music Site! </h2>
+</div>
+<div class="usr_profile_reso_dev">
+  <img class="usr_profile_pic" id="usr_profile_pic">
+</div>
+<h2 class="usr_name_disp" id="usr_name_disp">   <img src="https://firebasestorage.googleapis.com/v0/b/chat-c774b.appspot.com/o/0A%20NightAngle%20Assets%2Fdev_reso.png?alt=media&token=756f2b6f-e6ec-4594-9ee3-e20f9fe1e227" class="dev_tag"> </h2>
+
+
+  <h2 class="songs_number" id="songs_number"></h2>
+  
+  <input type="text" class="genre_selection" id="genre_selection" placeholder="Genre Please.." autocomplete="off" spellcheck="false">
+    <div class="container">
+        <input placeholder='Search...' class='js-search' type="text" id="reso_search" >
+        <i class="fa fa-search"></i>
+      </div>
+      
+    <button value="Upload_Music" class="music_upd_button_reso" id="music_upd_button_reso">
+        <div></div>
+      </button>
+      <ion-icon name="log-out-outline" class="logout_button" id="logout_button"></ion-icon>  
+      <ion-icon name="add-circle" class="step_pop" id="step_pop"></ion-icon>
+      <ion-icon name="arrow-up-circle" class="upload_section_pop" id="upload_section_pop"></ion-icon>
+      <ion-icon name="information-circle" class="info_pop" id="info_pop"></ion-icon>
+
+      <div class="the_musics" id="the_musics">
+        <table>
+          <thead>
+            <tr>
+              <th>Song Name</th>
+              <th>Genre</th>
+              <th>Artist</th>
+              <th>Album-Name</th>
+              <th>DOU</th>
+              <th>Uploader</th>
+              <th>Code</th>
+              <th>Album</th>
+
+            </tr>
+          </thead>
+          <tbody id="music_table_body">
+          </tbody>
+        </table>
+      
+      </div>
+
+      <div class="the_musics_upload" id="the_musics_upload">
+  
+      </div>
+
+      <div class="edit_music" id="edit_music">
+        <ion-icon name="close-circle" class="close_edit_music" id="close_edit_music"></ion-icon>
+        <label for="edit_music_uploader">Music Uploader</label>
+        <input type="text" class="edit_music_uploader" id="edit_music_uploader">
+        <label for="edit_music_artist">Music Artist</label>
+        <input type="text" class="edit_music_artist" id="edit_music_artist">
+        <label for="edit_music_genre">Music Genre</label>
+        <input type="text" class="edit_music_genre" id="edit_music_genre">
+        <label for="edit_music_album">Music Album</label>
+        <input type="text" class="edit_music_album" id="edit_music_album">
+        <p class="success_notif">The Song Detail(s) -- updated</p>
+       
+        <input type="button" class="bn632-hover bn26" id="edit_music_save" value="Save">
+        <input id="bannSong" class="bannSong" type="checkbox" onclick="bannSong(this)"/> 
+        <ion-icon name="ban" id="ban_ico"></ion-icon>
+      </div>
+
+      <div class="description_about" id="description_about">
+        <ion-icon name="close-circle" class="close_desc_abt" id="close_desc_abt"></ion-icon>
+        <h2 class="description_about_head">For Melomaniacs From Coders </h2>
+        <p class="about_paragraph"><strong> Developer's Dashboard </strong> allows the accounts of recognised developers with access to edit, remodify, maintain, append, amend the contents of <strong> Resonance Music Library. </strong> 
+          The contents which are being uploaded to the database are safe and secured under <strong> Firebase Configuration and Encryption </strong>  with due maintenance and other legal forms. The developers those are working on the platform are having special allowances, to work on and modify the platform from the backend.
+          We thus ensure the best music experience for the users. The library would expand as we add more songs into it - <strong> music is not just a waveform but is an emotion ! </strong> 
+        </p>
+        <img src="https://firebasestorage.googleapis.com/v0/b/chat-c774b.appspot.com/o/0A%20NightAngle%20Assets%2Freso_heart.png?alt=media&token=999f2e0c-0da5-449e-ab53-e3a84b38ad17" class="heart_reso">
+       
+        <!-- <ion-icon name="logo-ionic" class="ionicon"></ion-icon>
+        <label for="ionicon">Icons Provided by <a href="https://ionic.io/ionicons">Ionicons</a> 5.5.2</label>
+        <ion-icon name="logo-firebase" class="firebase"></ion-icon>
+        <label for="firebase">Database Supported by <a href="https://firebase.google.com/">Firebase</a> 11.4.0</label>
+        <ion-icon name="logo-google" class="google"></ion-icon>
+        <label for="google">Backed by <a href="https://www.google.com">Google</a> 105.0.5195.134</label> -->
+      </div>
+
+
+      <div class="steps_about" id="steps_about">
+        <ion-icon name="close-circle" class="close_steps" id="close_steps"></ion-icon>
+        <h2 class="guide_heading">Dear Developers, </h2>
+        <p> 1. Provide a particular <strong> Genre </strong> for the songs being uploaded (Must)</p>
+        <p> 2. <strong>[Recommended] </strong> Upload songs belonging to a particular genre together</p>
+        <p> 3. You can Edit the Song - <strong> Genre, Artist Name, Uploader and Album_Name </strong> by clicking on the <strong> Song Name </strong> in the list</p>
+        <p> 4. You can only upload <strong> 10 </strong> songs at a time</p>
+        <p> 5. Change the default album image by uploading a new image by clicking on the existing <strong> Default Album Image </strong> </p>
+        <p> 6. Click on the <strong> Genre Placeholder </strong>  and type in the <strong> Genre </strong> and click outside to set it </p>
+        <p> 7. By Changing the profile image, you agree to give <strong> Resonance </strong> the access to the image you choose to upload. Please make sure you have the right image to upload </p>
+        <p> ==Shower Us with New and Awesome Songs from Variety of Genres== </p>
+        <p> Love You All ❤ </p>
+      </div>
+
+      <div class="thumb_upload_prog" id="thumb_upload_prog"></div>
+      <p id="rightClickVouch" class="rightClickVouch"></p>
+      
+    <!-- <script src="JS/upload_music.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+    <script src="JS/reso_multiple_upload.js"></script>
+    <script type="text/javascript" src="JS/PatchContextMenu.js"></script>
+
+</body>
+</html>
+
+

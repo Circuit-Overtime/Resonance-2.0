@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Charmonman:wght@700&display=swap');
+:root
+{
+    --top_position: 0;
+    --left_position : 0;
+    --rotate_value : 0;
+}
+
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'poppins',sans-serif;
+}
+body
+{
+    /* background-color: rgb(0, 23, 44); */
+    display: grid;
+	min-height: 100vh;
+  overflow: hidden;
+  background-color: rgb(19, 19, 19);
+}
+.logo
+
+{
+    position: absolute;
+    height: 80px;
+    width: 200px;
+    top: 1px;
+    left: 1%;
+    background: url("IMAGES/resonance_logo.png");
+    background-size: cover;
+    background-position: center;
+    z-index: 110;
+    transform: scale(.8);
+    
+}
+.upload_music
+{
+  position: absolute;
+  width: 40px;
+  top: 80px;
+  height: 40px;
+  top: 12%;
+  left: 6%;
+  border: 1px solid lime;
+  box-shadow:  0 0 5px lime;
+  cursor: pointer;
+  outline: none;
+  border-radius: 10px;
+  background-color: transparent;
+  transition: 0.5s;
+  display: none;
+}
+.upload_music ion-icon
+{
+  color: lime;
+  font-weight: 700;
+  font-size: 20px;
+  display: none;
+
+}
+
+
+.create_playlist
+{
+    position: absolute;
+    width: 60%;
+    height: 80px;
+    left: 15%;
+    top: 5px;
+    background-color: transparent;
+    transition: 0.5s;
+    transform: translateY(-200px);
+    z-index: 1002;
+}
+
+.create_playlist.active
+{
+    position: absolute;
+    width: 80%;
+    height: 80px;
+    left: 15%;
+    top: 5px;
+    background-color: transparent;
+    transition: 0.5s;
+    transform: translateY(0px);
+  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+}
+@keyframes shake {
+  10%, 90% {
+    transform: translateX(-1px);
+  }
+  
+  20%, 80% {
+    transform: translateX(2px);
+  }
+
+  30%, 50%, 70% {
+    transform: translateX(-4px);
+  }
+
+  40%, 60% {
+    transform: translateX(4px);
+  }
+}
+
+.create_playlist input
+
+{
+    position: relative;
+    top: 3px;
+    left: 9%;
+    
+}
+.create_playlist .error_playlist_create
+{
+  position: absolute;
+  font-size: 12px;
+  left: 10%;
+  color: red;
+  font-weight: 700;
+  opacity: 0;
+  transition: 0.5s;
+}
+.create_playlist i
+{
+  position: absolute;
+  color: rgb(51, 255, 0);
+  top: 12px;
+  font-size: 24px;
+  left: 50px;
+}
+.create_playlist input[type = "text"]
+{
+    width: 30%;
+    height: 40px;
+    border-radius: 0px;
+    outline: none;
+    border: 2px solid #333;
+    font-size: 14px;
+    text-indent: 0.5em;
+    font-family: "Rancho", sans-serif;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    border-bottom: 2px solid #fff;
+    color: #fff;
+}
+
+.create_playlist input[type = "button"]
+{
+    width: 50px;
+    margin-left: 30px;
+    height: 45px;
+    border-radius: 20px;
+    border: 2px solid rgb(60, 255, 0);
+    outline: none;
+    background-color: transparent;
+    color: rgb(60, 255, 0);
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow:  0 0 20px rgb(60, 255, 0);
+
+}
+
+.create_playlist input[type = "button"]:nth-child(4)
+{
+    width: 50px;
+    margin-left: 30px;
+    height: 45px;
+    border-radius: 20px;
+    border: 2px solid rgb(226, 43, 43);
+    outline: none;
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    color: aliceblue;
+    box-shadow:  0 0 20px rgb(226, 43, 43);
+
+}
+
+#rightClickVouch
+{
+    position: absolute;
+    color: #888;
+    top: var(--top_position);
+    left: var(--left_position);
+    font-family: 'Zeyada', cursive;
+    font-size: 18px;
+    transition: .25s;
+    opacity: 0;
+    transform: rotate(var(--rotate_value));
+}

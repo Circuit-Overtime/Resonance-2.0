@@ -1,0 +1,125 @@
+.register
+{
+    position: relative;
+    width: 3950px;
+    padding: 40px 40px 60px;
+    border-radius: 10px;
+    text-align: center;
+    left: -43%;
+    transition: 1s;
+    opacity: 0;
+    z-index: 0;
+    float: right;
+    transform: translateY(750px);
+
+    
+}
+.register::before
+{
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+    /* background: linear-gradient(315deg,#e91e63,#5d02ff); */
+    z-index: -1;
+    transform: skew(2deg,1deg);
+    border-radius: 10px;
+}
+.register h2
+{
+    left: -34%;
+    position: relative;
+    color: rgb(124, 39, 0);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    font-size: 3em;
+}
+.register .input
+{
+    margin-top: 40px;
+    text-align: left;
+}
+.register .input .inputBox
+{
+    margin-top: 10px;
+    transition: 0.5s;
+}
+.register .input .inputBox label
+{
+    display: block;
+    color: rgb(48, 0, 0);
+    margin-bottom: 5px;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+.register .input .inputBox input
+{
+    position: relative;
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    padding: 5px 15px;
+    background: transparent;
+    border-bottom: 2px solid #00ff7b;
+    color: rgb(20, 0, 109);
+    font-size: 18px;
+}
+.register .input .inputBox input[type="submit"]
+{
+    cursor: pointer;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    transition: 0.5s;
+    background:linear-gradient(90deg,#5d02ff,#e91e63) ;
+    border: none;
+    color: #00ff7b;
+}
+.register .input .inputBox input[type="submit"]:hover
+{
+    box-shadow: 0 0 10px #e91e63;
+    background:linear-gradient(90deg,#5d02ff,#e91e63) ;
+    
+}
+.register .input .inputBox input[type="submit"]:active
+{
+    color: rgba(255, 255, 255, 0.521);
+    background:linear-gradient(315deg,#e91e6271,#5f02ff8c) ;
+}
+.forgot
+{
+    margin-top: 10px;
+    color: #fff;
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+.forgot a
+{
+    color: #ff0800;
+}
+.signin
+{
+    color:#001769;
+    font-weight: 700;
+
+}
+.signin a
+{
+    color: #235700;
+    text-decoration: none;
+}
+.error_reg
+{
+    position: relative;
+    color: rgb(250, 61, 18);
+    top: 0px;
+    
+
+}
+.error_reg u
+{
+    color: red;
+}

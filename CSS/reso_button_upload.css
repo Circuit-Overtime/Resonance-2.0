@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima:wght@100&family=Caveat+Brush&family=Cookie&family=Lobster+Two:ital@0;1&family=Pacifico&family=Passions+Conflict&family=Sacramento&family=Satisfy&display=swap');
+
+:root
+{
+    --music_upload_prog : 0;
+}
+body
+{
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+}
+/* ------------------------------------------------------------------------------------------------------------------------- */
+.maintenance_or_deny
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #2525256b;
+  z-index: 1000;
+  backdrop-filter: blur(25px);
+  display: none;
+}
+.maintenance_or_deny_desc
+{
+  position: absolute;
+  top: 45%;
+  left: 17%;
+  width: 60%;
+  color: #fff;
+  font-family: "calibri";
+  text-align: center;
+}
+.exit_countdown
+{
+  position: absolute;
+  top: 62%;
+  left: 17%;
+  width: 60%;
+  color: rgb(206, 252, 0);
+  font-family: "calibri";
+  text-align: center;
+}
+.exit_countdown .countdown
+{
+  color: red;
+}
+.maintenance_or_deny_desc strong
+{
+
+  color: rgb(12, 194, 5);
+
+}
+
+
+.maintenance_or_deny_ico
+
+{
+  position: absolute;
+  top: 10%;
+  font-size: 15em;
+  left: 17%;
+  width: 60%;
+  color: rgb(0, 255, 55);
+  font-family: "calibri";
+  text-align: center;
+}
+
+
+.usr_profile_reso_dev  
+{
+  position: absolute;
+  top: 2%;
+  left: 5%;
+  height: 50px;
+  width: 50px;
+  background-color: rgb(78, 78, 78);
+  box-shadow: 0 0 5px rgb(17, 17, 17);
+  border-radius: 50%;
+
+}
+.dev_tag
+{
+  position: fixed;
+  margin-left: 5px ;
+  height: 40px;
+  top: 22px;
+  left: 25%;
+  filter: drop-shadow(0 0 15px rgb(3, 87, 0));
+  border-radius: 10px;
+  pointer-events: none;
+}
+.usr_name_disp
+{
+  position: absolute;
+  top: 1%;
+  left: 10%;
+  width: 60%;
+  float: right;
+  font-family: 'Satisfy', cursive;
+  color: #252525;
+  text-transform: capitalize;
+  pointer-events: none;
+}
+
+.usr_profile_pic
+{
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  pointer-events: none;
+}
+/* ---------------------------------------------------------------------------------------------------------------------- */
+
+.music_upd_button_reso {
+    position: absolute;
+    top: 5%;
+    left: 43%;
+    display: block;
+    width: 140px;
+    height: 60px;
+    /* padding: 40px; */
+    margin: 0 auto;
+
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    border-radius: 2px;
+    box-shadow: 0 0px 15px #111010;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+  
+  .music_upd_button_reso:before,
+  .music_upd_button_reso:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .music_upd_button_reso:before {
+    transform: scale(1);
+    background-image: url("https://firebasestorage.googleapis.com/v0/b/chat-c774b.appspot.com/o/0A%20NightAngle%20Assets%2Freso_button_banner.jpg?alt=media&token=3df407af-f8d4-452d-93ce-702cbfd33f16");
+    background-size: cover;
+    transition: 0.3s ease transform;
+    z-index: 1;
+  }
+  
+  .music_upd_button_reso:after {
+    background-color: #000;
+    opacity: 0.16;
+    z-index: 2;
+  }
+  
+  .music_upd_button_reso div {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+  }
+  
+  .music_upd_button_reso div:before,
+  .music_upd_button_reso div:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    color: #fff;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    padding: 25px 0;
+    transition: 0.3s ease all;
+  }
+  
+  .music_upd_button_reso div:before {
+    content: "Upload";
+    letter-spacing: 0;
+    opacity: 1;
+    font-size: 14px;
+    transform: scale(1);
+  }
+  
+  .music_upd_button_reso div:after {
+    content: "Click !";
+    letter-spacing: -10px;
+    transform: scale(0);
+    font-size: 14px;
+    opacity: 0;
+  }
+  
+  .music_upd_button_reso:hover:before {
+    transform: scale(1.3);
+  }
+  
+  .music_upd_button_reso:hover div:before {
+    letter-spacing: 3px;
+    opacity: 0;
+    transform: scale(4);
+  }
+  
+  .music_upd_button_reso:hover div:after {
+    letter-spacing: 0;
+    opacity: 1;
+    transform: scale(1);
+  }
+  /* -------------------------------------------------------------------------------------------------------------------- */
+  
+  .the_musics_upload
+  {
+    position: absolute;
+    height: 2px; /*for 1 music*/
+    width: 60%;
+    left: 20%;
+    top: -12%;
+    overflow: hidden;
+    background-color: rgba(65, 65, 65, 0.356);
+    backdrop-filter: blur(25px);
+    display: block;
+    border-radius: 5px;
+    transition: 0.5s;
+    transform: translateY(-200px);
+    z-index: 160;
+  }
+
+  .the_musics_upload::-webkit-scrollbar
+  {
+    background-color: transparent;
+  }
+  .the_musics_upload .the_music_upload_name
+  {
+    position: relative;
+    top: 0px;
+    /* float: right; */
+    left: 15px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: rgb(56, 56, 56);
+    margin-bottom: 2px;
+  }
+  .the_music_upload_prog
+  {
+    position: relative;
+    top: 5px;
+    max-width: 90%;
+    width: 20%;
+    left: 2%;
+    height: 5px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    transition: 0.5s;
+    margin-bottom: 10px;
+  }
+
+
+  .the_musics_upload.active
+  {
+    position: absolute;
+    height: 262px; /*for 1 music*/ /*262 for 5 musics*/
+    width: 60%;
+    left: 20%;
+    top: 2%;
+    overflow: hidden;
+    overflow-y: auto;
+    background-color: rgba(19, 19, 19, 0.356);
+    backdrop-filter: blur(25px);
+    display: block;
+    border-radius: 5px;
+    transform: translateY(0px);
+  }
+  .the_musics_upload.active .no_upload_scheduled
+  {
+    position: absolute;
+ width: 350px;
+ height:  250px;
+ left: 25%;
+ background-position: center;
+ background-size: contain;
+ display: block;
+  }
+
+  .the_musics_upload .no_upload_scheduled
+  {
+    position: absolute;
+ width: 350px;
+ height:  250px;
+ left: 25%;
+ background-position: center;
+ background-size: contain;
+ display: block;
+  }
+
+
+  .the_musics_upload.active::-webkit-scrollbar
+  {
+    background-color: transparent;
+  }
+  .the_musics_upload.active .the_music_upload_name
+  {
+    position: relative;
+    top: 0px;
+    /* float: right; */
+    left: 15px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: rgb(56, 56, 56);
+    margin-bottom: 2px;
+  }
+
+  .upload_pause
+  {
+    position: absolute;
+    left: 87%;
+    color: azure;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .upload_resume
+  {
+    position: absolute;
+    left: 87%;
+    color: azure;
+    font-weight: 700;
+    cursor: pointer;
+    display: none;
+  }
+  .upload_stop
+  {
+    position: relative;
+    left: 90%;
+    color: azure;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  

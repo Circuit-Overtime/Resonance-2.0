@@ -1,0 +1,131 @@
+#laterList_container 
+{
+    position: absolute;
+    height: 490px;
+    width: 97%;
+    top: 10%;
+    left: 1.5%;
+    display: block;
+    max-width: 97%;
+    /* max-height: 550px; */
+    overflow-x: hidden;
+    overflow-y: auto;
+    /* flex-wrap: wrap; */
+    transition: 0.5s;
+    border-radius: 20px;
+    padding-left: 15px;
+    padding-right: 10px;
+    scroll-behavior: smooth;
+    z-index: 10000;
+    background-color: rgba(22, 22, 22, 0.356);
+    backdrop-filter: blur(10px);
+    transform: translateX(1690px); /*1690px*/
+
+}
+#close_laterList_ico
+{
+    position: absolute;
+    color: red;
+    left: 97%;
+    top: 90%;
+    font-size: 24px;
+    filter: drop-shadow(0 0 5px red);
+    cursor:pointer;
+    z-index: 100;
+}
+.laterList_name_disp 
+{
+    color: rgba(94, 255, 0, 0.911);
+    top: 10px;
+    position: relative;
+    left: 15px;
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+.laterList_name_disp i
+{
+    position: relative;
+    top: 0px;
+    margin-right: 24px;
+    left: 15px;
+    color: aliceblue;
+
+}
+
+.laterList_container::-webkit-scrollbar
+{
+    background-color: transparent;
+}
+.laterList_songs
+{
+    position: relative;
+    height: 80px;
+    width: 95%;
+    left: 2.5%;
+    background-color: rgba(255, 255, 255, 0.295);
+    top: 20px;
+    border-radius: 10px;
+    display: flex;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.laterList_songs .laterList_song_album
+{
+    position: relative;
+    height: 65px;
+    width: 65px;
+    top: 7.5px;
+    left: 7px;
+    border-radius: 20px;
+    background-color: aliceblue;
+    /* box-shadow: 0 0 5px #0f0; */
+    justify-content: stretch;
+    flex-wrap: wrap;
+
+}
+
+.laterList_songs .laterList_song_album img
+{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+    background-position: center;
+}
+.laterList_songs .Laterist_song_name
+{
+    position: absolute;
+    left: 85px;
+    top: 12px;
+    color: rgb(0, 214, 0);
+
+}
+.laterList_songs .Laterist_song_artist
+{
+    position: absolute;
+    left: 86px;
+    top: 46px;
+    text-transform: capitalize;
+    color: rgb(223, 14, 14);
+    font-size: 15px;
+}
+.div_break
+{
+    position: relative;
+    top: 76px;
+    height: 2px;
+    width: 80%;
+    left: 2%;
+    background-color: rgba(250, 235, 215, 0.582);
+    border-radius: 2px;
+}
+.laterList_songs .expand_laterList_song
+{
+    position: absolute;
+    top: 30px;
+    left: 87%;
+    font-size: 34px;
+    color: rgb(0, 255, 55);
+    cursor: pointer;
+}

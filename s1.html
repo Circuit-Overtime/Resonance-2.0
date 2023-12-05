@@ -1,0 +1,221 @@
+<!-- This is patch 2.0  -->
+<html>
+    <head>
+        <Title>Welcome to Resonance</Title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel="stylesheet" href="CSS/login.css">
+        <link rel="stylesheet" href="CSS/register.css">
+        <link rel="stylesheet" href="CSS/password_reset.css">
+        <link rel="stylesheet" href="CSS/logout_form.css">
+        <link rel="stylesheet" href="CSS/successLoader.css">
+        <link rel="stylesheet" href = "CSS/dsgn.css">
+        <link rel="stylesheet" href="CSS/mobile_view_login.css" type="text/css">
+        <link rel="stylesheet" href="CSS/mobile_view_register.css" type="text/css">
+        <link rel="stylesheet" href="CSS/mobile_view_logout.css" type="text/css">
+        <link rel="stylesheet" href="CSS/mobile_view_passwordReset.css" type="text/css">
+        <link rel="icon" href="https://firebasestorage.googleapis.com/v0/b/chat-c774b.appspot.com/o/0A%20NightAngle%20Assets%2FloginPageICO.ico?alt=media&token=53d2f12a-f48e-4c88-a940-a37e0d758e92">
+        <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+        <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+        <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" >
+    </head>
+    <body>
+
+        <div class="successLoaderContainer" id="successLoaderContainer">
+            <div class="darkbackground">
+        
+            </div>
+            <div class="sucessLoader">
+                    
+                <div id="tiles">
+                </div>
+                <h1 id="title" class="centered">
+                    Improving Your Music Experience 
+                    <span class="fancy">Fervently.</span> 
+                  </h1>
+        
+                
+            </div>
+        </div>
+
+
+        <h2 class="register_message" id="register_message"> </h2>
+        <!-- <div class="dsgn"></div> -->
+        <div class="floatingSquareOne"></div>
+        <div class="floatingSquareTwo"></div>       
+        <div class="form" id="form">
+            <h2>Login</h2>
+            <div class="input">
+                <div class="inputBox">
+                    <label for="">Username</label>
+                    <input type="text" id="login_usr" autocomplete="off">
+                </div>
+                <div class="inputBox">
+                    <label for="">Email</label>
+                    <input type="email" id="login_email" autocomplete="off" >
+                </div>
+                <div class="inputBox">
+                    <label for="">Password</label>
+                    <input type="password" id="login_psswd" >
+                    <i toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password" id = "passwd_toogle_login" onclick = "toogle_visibility_login()"></i>
+                </div>
+                <div class="inputBox">
+                    <input type="submit" name="" value="Sign In" id="signin_btn" onclick="login()"> 
+                </div>
+            </div>
+            <p class="forgot" id="forgot_password">Forgot Password? <a href="#">Click Here</a></p>
+            <p class="signup">
+                Don't have an account ?
+                <a href="#" onclick="toggleReg()">Sign Up.</a>
+              </p>
+              <p class="error" id="error"><u id="error_u"></u></p>
+        </div>
+        <div class="register" id="register">
+            <h2>Register</h2>
+            <div class="input">
+                <div class="inputBox">
+                    <label for="">Username</label>
+                    <input type="text" id="reg_usr"  maxlength="22" >
+                </div>
+                <div class="inputBox">
+                    <label for="">Email Address</label>
+                    <input type="email" id="reg_email" >
+                </div>
+                <div class="inputBox">
+                    <label for="">Password</label>
+                    <input type="password" id="reg_psswd" >
+                    <i toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password" id = "passwd_toogle_register" onclick = "toogle_visibility_reg()"></i>
+                </div>
+                <div class="inputBox">
+                    <label for="">Confirm Password</label>
+                    <input type="password" id="reg_psswd_confirm" >
+                    <i toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password" id = "passwd_toogle_register_conf" onclick = "toogle_visibility_reg_conf()"></i>
+                </div>
+                <div class="inputBox">
+                    <input type="submit" name="" value="Register" id = "btn_reg" onclick="register()"> 
+                </div>
+            </div>
+            <p class="signin">
+                Have an Account?
+                <a href="#" onclick="toggleLogin()">Sign In.</a>
+              </p>
+              <p class="error_reg" id="error_reg"> <u id="error_u_reg"></u></p> 
+        </div>
+
+        <div class="reset" id="reset">
+            <h2>Reset Password</h2>
+            <div class="input">
+            <div class="inputBox">
+                <label for="">Username</label>
+                <input type="text" id="res_usr" value="">
+            </div>
+
+            <div class="inputBox" id="label_res_email">
+                <label for="" >Email</label>
+            <input type="email" id="res_email" value="">
+            </div>
+
+            
+                <div class="inputBox" id="label_res_password">
+                    <label for="">New Password</label>
+                <input type="password" id="res_password">
+                </div>
+
+                <div class="inputBox" id="label_res_password_conf">
+                    <label for="" >Confirm New Password</label>
+                <input type="password" id="res_password_conf">
+                </div>
+
+
+
+                <div class="inputBox">
+                    <input type="submit" name="" value="Confirm" id="reset_btn" onclick="reset()"> 
+                </div>
+                <p class="remember" id="remember_password">Remember Password? <a href="#">Click Here</a></p>
+                <p class="signup_res" id="register_if_not_reset">
+                    Don't have an account ?
+                    <a href="#">Sign Up.</a>
+                  </p>
+                </digvy>
+            </div>
+            <p id="error_res"><g/p>
+        </div>
+
+
+        <div class="logout" id="logout">
+            <h2>Logout</h2>
+            <div class="input">
+                <div class="inputBox">
+                    <input type="submit" name="" value="Logout" id="logout_btn" > 
+                    
+                </div>
+                </div>
+                <h2 class="logout_greetings" id="logout_greetings">Sayonara!</h2>
+                </div>
+                <ion-icon name="enter-outline" class="re_enter" id="re_enter"></ion-icon>
+                <p class="creds">Concocted and maintained by Ayushman ft. Google | Visit at <a href="https://www.youtube.com/channel/UCsq0hxsz6FACKdcf9TOKHbQ">B00LEAN</a> -- Happy Visit Developers and Artists <strong>❤</strong></p>
+                <p id="rightClickVouch" class="rightClickVouch"></p>
+                </body>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase-firestore.js"></script>
+        <script>
+           var firebaseConfig = {
+    apiKey: "AIzaSyAUgJj60PbLp87XDEru1hABxGHIppJkJiM",
+    authDomain: "chat-c774b.firebaseapp.com",
+    databaseURL: "https://chat-c774b-default-rtdb.firebaseio.com",
+    projectId: "chat-c774b",
+    storageBucket: "chat-c774b.appspot.com",
+    messagingSenderId: "74762195917",
+    appId: "1:74762195917:web:a8f94415ad6a018d6daa84"
+  };
+ 
+    
+
+  // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    // window.onbeforeunload = function (e) {
+    //   e = e || window.event;
+
+    //   if (e) {
+    //     //  e.returnValue = 'exit?';
+    //     localStorage.clear();
+    //   }
+
+
+//    };
+// console.log(localStorage)
+     //clears the local storage on window unload
+     // prevents same tab from opening twice
+        //     Window.onload=function(){
+        // localStorage.setItem("windows",1);  
+        // if(localStorage.getItem('windows')===1){
+
+        // window.close();
+
+        // }else{
+
+        // localStorage.setItem("windows",1);
+        // }
+
+        // }
+
+        // Window.onbeforeunload=function(){
+        // localStorage.setItem("windows",0);
+        // }
+
+            </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+        <script src="JS/successloading.js"></script>
+        <script src="JS/login.js"></script>
+        <script src="JS/register.js"></script>
+        <script src="JS/loginauth.js" ></script> <!-- used for logging in-->
+        <script src="JS/forget.js"></script>
+        <script type="text/javascript" src="JS/PatchContextMenu.js"></script>
+        
+        
+    </body>
+</html>
+<!-- s1 = login or reg  -->
+<!-- s3 = resonance  -->
+<!-- s4 = multiple upload  -->

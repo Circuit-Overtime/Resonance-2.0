@@ -1,0 +1,325 @@
+.side_navbar
+{
+    position: absolute;
+    height: 85%;
+    width: 15%;
+    left: 1%;
+    top: 10px;
+    background-color: rgb(22, 22, 22);
+    transition: 0.5s;
+}
+
+.expand_nav_bar
+{
+  position: absolute;
+  left: 50%;
+  top: 5%;
+  color: #fff;
+  font-size: 30px;
+  display: none;
+}
+
+#close_nav_bar
+{
+  position: absolute;
+  left: 2%;
+  top: 9%;
+  color: #fff;
+  font-size: 35px;
+  display: none;
+  z-index: 1200;
+}
+
+.add_playList 
+{
+  position: absolute;
+  width: 40px;
+  height: 43px;
+  top: 12%;
+  
+  left: 140px;
+  transition: 0.5s;
+  border: 1px solid rgb(43, 255, 0);
+  box-shadow:  0 0 5px rgb(9, 255, 0);
+  cursor: pointer;
+  outline: none;
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.add_playList  ion-icon
+{
+  color: rgb(30, 255, 0);
+  font-weight: 700;
+  font-size: 20px;
+
+}
+
+#expand_nav_bar
+{
+  display: none;
+}
+
+
+
+.playlist_popup 
+{
+  position: absolute;
+  width: 40px;
+  top: 130px;
+  height: 40px;
+  top: 12%;
+  left: 15px;
+  transition: 0.5s;
+  border: 1px solid rgb(0, 255, 136);
+  box-shadow:  0 0 5px rgb(0, 255, 136);
+  cursor: pointer;
+  outline: none;
+  border-radius: 10px;
+  background-color: transparent;
+}
+
+.playlist_popup  ion-icon
+{
+  color: rgb(0, 255, 149);
+  font-weight: 700;
+  font-size: 20px;
+
+}
+
+
+.laterList
+{
+  position: absolute;
+  width: 40px;
+  top: 80px;
+  height: 40px;
+  top: 12%;
+  left: 80px;
+  border: 1px solid rgb(255, 208, 0);
+  box-shadow:  0 0 5px rgb(217, 255, 0);
+  cursor: pointer;
+  outline: none;
+  border-radius: 10px;
+  background-color: transparent;
+  transition: 0.5s;
+}
+.laterList ion-icon
+{
+  color: rgb(208, 255, 0);
+  font-weight: 700;
+  font-size: 20px;
+
+}
+
+
+
+.my_playlists
+{
+    position: absolute;
+    top: 33%;
+    left: 23px;
+    color:  rgb(9, 255, 0);
+    font-size: 22px;
+    font-weight: 700;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    margin-left: 3px;
+    cursor: pointer;
+}
+.side_navbar .existing_playlists
+{
+    position: absolute;
+    height: 280px;
+    width: 170px;
+    background-color: transparent;
+    top: 39%;
+    left: 22px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+.side_navbar .existing_playlists::-webkit-scrollbar
+{
+    background-color: transparent;
+}
+.side_navbar .features {
+    position: relative;
+    width: 120px;
+    height: 60px;
+    margin: 5px;
+    float: left;
+    border: 2px solid #0eac00;
+    box-sizing: border-box;
+    top:0px;
+    left: 0px;
+    border-radius: 10px;
+    overflow: all;
+    transition: 0.5s;
+    
+  }
+  
+  .side_navbar .features div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 25px;
+    transition: .5s ease;
+    overflow: all;
+    border-radius: 10px;
+  }
+  
+  .side_navbar .features input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 120px;
+    height: 100px;
+    opacity: 0;
+    cursor: pointer;
+    overflow: hidden;
+    flex-wrap: wrap;
+    border-radius: 10px;
+    word-wrap: break-word;
+  }
+
+  .side_navbar .features span
+  {
+    font-weight: 700;
+    text-align: center;
+    color: #fff;
+    overflow: all;
+    word-wrap: break-word;
+    font-size: 14px;
+  }
+
+  
+  .side_navbar .features span i
+  {
+    font-weight: 700;
+    text-align: center;
+    color: rgb(252, 0, 34);
+    position: absolute;
+    left: 130px;
+    cursor: pointer;
+  }
+
+  .side_navbar .features:nth-child(1) span i
+  {
+    font-weight: 700;
+    text-align: center;
+    color: rgb(252, 0, 34);
+    position: absolute;
+    left: 130px;
+    cursor: pointer;
+    display: none;
+  }
+  .side_navbar .deleteCountDown
+  {
+    height: 30px;
+    width: 100%;
+    top: 96%;
+    left: 0;
+    /* overflow: hidden; */
+    background-color: transparent;
+    transition: 0.5s;
+    transform: translateX(-120px);
+    position: absolute;
+  }
+  .side_navbar #deletePlaylisticon
+  {
+    position: absolute;
+    left: 22%;
+    top: -5px;
+    cursor: pointer;
+  }
+  .base-timer__svg
+  {
+    position: relative;
+    top: -35px;
+    left: -25px;
+  }
+#undoDeletePlaylist
+{
+  position: absolute;
+  left: 80%;
+  top: -5px;
+  cursor: pointer;
+}
+  .base-timer {
+    position: absolute;
+    height: 30px;
+    width: 100px;
+    background-color: transparent;
+    position: absolute;
+    top: -40%;
+  }
+  
+  /* Removes SVG styling that would hide the time label */
+  .base-timer__circle {
+    position: absolute;
+    top: 96%;
+    fill: none;
+    stroke: none;
+  }
+  
+  /* The SVG path that displays the timer's progress */
+  .base-timer__path-elapsed {
+    stroke-width: 5px;
+    stroke: transparent;
+  }
+
+  .base-timer__label {
+    position: absolute;
+    
+    /* Size should match the parent container */
+  
+    
+    /* Keep the label aligned to the top */
+    top: 10%;
+    
+    /* Create a flexible box that centers content vertically and horizontally */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    /* Sort of an arbitrary number; adjust to your liking */
+    font-size: 18px;
+    font-family: "calibri";
+    font-weight: 700;
+    left: 20%;
+  }
+
+
+  .base-timer__path-remaining {
+    stroke-width: 15px;
+    stroke-linecap: round;
+    transform: rotate(90deg) scale(0.3);
+    transform-origin: center;
+    transition: 1s linear all;
+    fill-rule: nonzero;
+    stroke: currentColor;
+    height: 10px;
+    width: 10px;
+
+  }
+  
+  .base-timer__path-remaining.green {
+    background-color: rgb(65, 184, 131);
+    stroke:rgb(9, 255, 0);
+    
+  }
+
+
+
+
+
+  .side_navbar input[type=radio]:checked ~ div {
+    background-color: #00c410;
+  }
+  #Listen_Later
+  {
+    pointer-events: none;
+  }

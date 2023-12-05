@@ -1,0 +1,689 @@
+  :root
+  {
+      --thumb_upload_prog: 0;
+  }
+
+  .the_musics
+  {
+    position: absolute;
+    top: 25%;
+    height: 450px;
+    width: 100%;
+    overflow: auto;
+    overflow-x: none;
+    background-color: transparent;
+    backdrop-filter: blur(25px);
+    display: block;
+    padding-bottom: 15px;
+    cursor: pointer;
+  }
+
+  table { 
+    width: 88%;
+      left: 5%; 
+    border-collapse: collapse; 
+    margin:50px auto;
+      position: absolute;
+      top: -5%;
+      /* overflow: hidden; */
+      z-index: 100;
+      transition: 0.5s;
+
+    }
+  
+
+  /* Zebra striping */
+  tr:nth-of-type(odd) { 
+    background: rgb(0, 156, 47); 
+    
+    }
+
+
+      tr:nth-of-type(even) { 
+        
+          background: rgb(1, 44, 0); 
+          }
+
+
+  th { 
+    background: #000000; 
+    color: rgb(229, 255, 0); 
+    font-weight: bold; 
+      border: 2px solid #0000;
+    }
+
+  td, th { 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    text-align: left; 
+    font-size: 18px;
+      height: 60px;
+      transition: 0.5s;
+    }
+  .tr_image
+  {
+      position: relative;
+      height: 97%;
+      width: 97%;
+      left: 1.5%;
+      top: 1.5%;
+      transition: 0.5s;
+  }
+
+  .Song_Name
+  {
+      color: #fff;
+      font-weight: 700;
+      font-size: 19px;
+      font-family: "calibri";
+  }
+
+  .Genre
+  {
+      color: rgb(255, 230, 0);
+      font-weight: 700;
+      font-size: 19px;
+
+  }
+
+  .Artist
+  {
+      color: rgb(255, 255, 255);
+      font-weight: 700;
+      font-size: 19px;
+      
+  }
+
+  .Album_Name
+  {
+      color: rgb(255, 255, 255);
+      font-weight: 700;
+      font-size: 19px;
+      
+  }
+
+  .DOU
+  {
+      color: rgb(255, 255, 255);
+      font-weight: 700;
+      font-size: 19px;
+      
+  }
+
+  .Uploader
+  {
+      color: rgb(255, 255, 255);
+      font-weight: 700;
+      font-size: 19px;
+      
+  }
+  .album_pic
+  {
+      height: 60px;
+      width: 60px;
+  }
+  .thumb_upload_prog
+  {
+      position: absolute;
+      top: 97%;
+      height: 5px;
+      width: var(--thumb_upload_prog);
+      max-width: 90%;
+      left: 5.5%;
+      border-radius: 5px;
+      transition: 0.5s;
+      background-color: rgb(12, 100, 0);
+  }
+
+
+  /* 
+  Max width before this PARTICULAR table gets nasty
+  This query will take effect for any screen smaller than 760px
+  and also iPads specifically.
+  */
+  @media only screen and (max-width: 768px),
+  (min-device-width: 768px) and (max-device-width: 1024px)  {
+
+    table { 
+        width: 97%;
+        left: 1%; 
+    }
+
+    /* Force table to not be like tables anymore */
+    table, thead, tbody, th, td, tr { 
+      display: block; 
+    }
+    
+    /* Hide table headers (but not display: none;, for accessibility) */
+    thead tr { 
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+    
+    tr { border: 1px solid #ccc; }
+    
+    td { 
+      /* Behave  like a "row" */
+      border: none;
+      border-bottom: 1px solid #eee; 
+      position: relative;
+      padding-left: 50%; 
+      height: 30px;
+    }
+
+    td:before { 
+      /* Now like a table header */
+      position: absolute;
+      /* Top/left values mimic padding */
+      top: 6px;
+      left: 6px;
+      width: 45%; 
+      padding-right: 10px; 
+      white-space: nowrap;
+      /* Label the data */
+      content: attr(data-column);
+
+      color: rgb(0, 255, 255);
+      font-weight: bold;
+    }
+    .album_pic
+    {
+        height: 70px;
+        width: 70px;
+    }
+
+    tr:nth-of-type(odd) { 
+      background: rgb(0, 42, 66); 
+      
+      }
+  
+  
+        tr:nth-of-type(even) { 
+          
+            background: rgb(0, 10, 53); 
+            }
+  .Uploader
+  {
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  font-size: 15px;
+                
+  }           
+  .Song_Name
+  {
+      color: #fff;
+      font-weight: 700;
+      font-size: 15px;
+      font-family: "calibri";
+  }
+
+  .Genre
+  {
+      color: rgb(255, 230, 0);
+      font-weight: 700;
+      font-size: 15px;
+
+  }
+
+  .Artist
+  {
+      color: rgb(255, 255, 255);
+      font-weight: 700;
+      font-size: 15px;
+      
+  }
+
+  .Album_Name
+  {
+      color: rgb(255, 255, 255);
+      font-weight: 700;
+      font-size: 15px;
+      
+  }
+
+  .DOU
+  {
+      color: rgb(255, 255, 255);
+      font-weight: 700;
+      font-size: 15px;
+      
+  }
+
+
+  }
+
+  /* --------------------------------------------------------------------------------------------------------------------- */
+
+  .container{
+      width: 90%;
+      left: 5%;
+      position: absolute;
+      top: 15%;
+      height: 10%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* background-color: #747474; */
+    }
+    
+    input[type=text]{
+      position: relative;
+      top: 0px;
+      padding: 15px 40px 15px 20px;
+      width: 95%;
+      color: #00f020;
+      /* text-transform: uppercase; */
+      font-size: 16px;
+      font-weight: 100;
+      letter-spacing: 2px;
+      border: none;
+      border-radius: 5px;
+      background: #222;
+      box-shadow: 0 0 5px solid #222;
+      transition: width 0.4s ease;
+      outline: none;
+    }
+      
+      /* input[type=text]:focus{ width: 95%; } */
+
+    
+    i{
+      position: relative;
+      left: -37px;
+      color: #ffffff;
+    }
+
+    #genre_selection:focus
+    {
+      position: relative;
+      padding: 15px 40px 15px 20px;
+      width: auto;
+      left: 60%;
+      top: 30px;
+      color: #2bff00;
+      /* text-transform: uppercase; */
+      font-size: 16px;
+      font-weight: 100;
+      letter-spacing: 2px;
+      border: none;
+      border-radius: 5px;
+      background: linear-gradient(165deg, #b68e8e 0%,#464747 #F9F9F9 100%);
+      box-shadow: 0 0 5px solid #222;
+      transition: 0.5s;
+      background-color: #222;
+      outline: none;
+    }
+
+    #genre_selection
+    {
+      position: relative;
+      padding: 15px 40px 15px 20px;
+      width: auto;
+      left: 60%;
+      top: 30px;
+      color: #202020;
+      /* text-transform: uppercase; */
+      font-size: 16px;
+      font-weight: 100;
+      letter-spacing: 2px;
+      border: none;
+      border-bottom: 3px solid #222;
+      /* border-radius: 5px; */
+      background: linear-gradient(165deg, #b68e8e 0%,#464747 #F9F9F9 100%);
+      box-shadow: 0 0 5px solid #222;
+      transition: 0.5s;
+      background-color: rgb(255, 255, 255);
+      outline: none;
+    }
+
+    .songs_number
+    {
+      position: absolute;
+      top: -2%;
+      left: 60%;
+      font-size: 24px;
+      font-weight: 700;
+      font-family: "calibri";
+      color: #222;
+    }
+    .edit_music
+    {
+      transition: 0.5s;
+      position: absolute;
+      height: 420px;
+      width: 450px;
+      background-color: #070707be;
+      top: 30%;
+      left: 30%;
+      overflow: hidden;
+      backdrop-filter: blur(25px);
+      border-radius: 20px;
+      box-shadow:  0 0 20px #222;
+      opacity: 0;
+      display: none;
+      pointer-events: none;
+      z-index: -1;
+      transition: 0.5s;
+    }
+  
+    .edit_music .edit_music_uploader
+    {
+      position: relative;
+      padding: 15px 40px 15px 20px;
+      width: 380px;
+      top: 55px;
+      left: 5px;
+      color: #04c4ff;
+      /* text-transform: uppercase; */
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      border: none;
+      border-bottom: 2px solid #fff;
+      background: transparent;
+      box-shadow: 0 0 5px solid #222;
+      transition: width 0.4s ease;
+      outline: none;
+      margin-bottom: 10px;
+      transition: 0.8s;
+      border-radius: 0px;
+    }
+
+    .edit_music .edit_music_artist
+    {
+      position: relative;
+      padding: 15px 40px 15px 20px;
+      width: 380px;
+      top: 55px;
+      left: 5px;
+      color: #04c4ff;
+      font-weight: 700;
+      /* text-transform: uppercase; */
+      font-size: 16px;
+      letter-spacing: 2px;
+      border: none;
+      border-bottom: 2px solid #fff;
+      background: transparent;
+      box-shadow: 0 0 5px solid #222;
+      transition: width 0.4s ease;
+      outline: none;
+      margin-bottom: 10px;
+      transition: 0.8s;
+      border-radius: 0px;
+    }
+
+    .edit_music .edit_music_genre
+    {
+      position: relative;
+      padding: 15px 40px 15px 20px;
+      width: 380px;
+      top: 55px;
+      left: 5px;
+      /* text-transform: uppercase; */
+      font-size: 16px;
+      color: #04c4ff;
+      font-weight: 700;
+      letter-spacing: 2px;
+      border: none;
+      border-bottom: 2px solid #fff;
+      background: transparent;
+      box-shadow: 0 0 5px solid #222;
+      transition: width 0.4s ease;
+      outline: none;
+      margin-bottom: 10px;
+      transition: 0.8s;
+      border-radius: 0px;
+    }
+
+    .edit_music .edit_music_album
+    {
+      position: relative;
+      padding: 15px 40px 15px 20px;
+      width: 380px;
+      top: 55px;
+      left: 5px;
+      /* text-transform: uppercase; */
+      font-size: 16px;
+      color: #04c4ff;
+      font-weight: 700;
+      letter-spacing: 2px;
+      border: none;
+      border-bottom: 2px solid #fff;
+      background: transparent;
+      box-shadow: 0 0 5px solid #222;
+      transition: width 0.4s ease;
+      outline: none;
+      margin-bottom: 10px;
+      transition: 0.8s;
+      border-radius: 0px;
+    }
+
+    .edit_music .edit_music_genre:focus
+    {
+      border-bottom: 2px solid #2bff00;
+    }
+
+
+    .edit_music .edit_music_artist:focus
+    {
+      border-bottom: 2px solid #2bff00;
+    }
+
+    .edit_music .edit_music_uploader:focus
+    {
+      border-bottom: 2px solid #2bff00;
+    }
+
+    .edit_music .edit_music_album:focus
+    {
+      border-bottom: 2px solid #2bff00;
+    }
+    
+    .edit_music label 
+    {
+      position: relative;
+      top: 50px;
+      left: 25px;
+      font-size: 14px;
+      font-family: "Calibri";
+      color: #d4d4d4;
+      font-weight: 700;
+    }
+
+    .bn632-hover {
+      transition: 0.5s;
+      transform: translateX(00px);
+      position: absolute;
+      top: 82%;
+      left: 55%;
+      width: 160px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+      cursor: pointer;
+      margin: 20px;
+      height: 45px;
+      text-align:center;
+      border: none;
+      background-size: 300% 100%;
+      border-radius: 50px;
+      moz-transition: all .4s ease-in-out;
+      -o-transition: all .4s ease-in-out;
+      -webkit-transition: all .4s ease-in-out;
+      transition: all .4s ease-in-out;
+    }
+    
+    .bn632-hover:hover {
+      background-position: 100% 0;
+      moz-transition: all .4s ease-in-out;
+      -o-transition: all .4s ease-in-out;
+      -webkit-transition: all .4s ease-in-out;
+      transition: all .4s ease-in-out;
+    }
+    
+    .bn632-hover:focus {
+      outline: none;
+    }
+    
+    .bn632-hover.bn26 {
+      background-image: linear-gradient(
+        to right,
+        #1d7906,
+        #6beb44,
+        #04fe75,
+        #3fed48
+      );
+      box-shadow: 0 4px 15px 0 rgba(40, 155, 5, 0.75);
+    }
+    #close_edit_music
+    {
+      position: absolute;
+      top: 20px;
+      left: 90%;
+      font-size:20px;
+      color: rgb(255, 255, 255);
+      cursor: pointer;
+    }
+    .success_notif
+    {
+      position: absolute;
+      top: 5px;
+      left: 22px;
+      font-family: "calibri";
+      color: #2bff00;
+      font-weight: 700;
+      display: none;
+      transition: 0.5s;
+    }
+
+  .upload_section_pop
+  {
+    position: absolute;
+    left: 90%;
+    top: 5%;
+    font-size: 24px;
+    color: #222;
+    cursor: pointer;
+    animation: pulse 0.5s linear infinite;
+    animation-play-state: paused;
+    filter: drop-shadow( 0 0 5px #222);
+    }
+
+    .info_pop
+    {
+      position: absolute;
+      left: 93%;
+      top: 5%;
+      font-size: 24px;
+      color: rgb(255, 0, 55);
+      cursor: pointer;
+      animation: pulse 0.5s linear infinite;
+      animation-play-state: paused;
+      filter: drop-shadow( 0 0 5px rgb(255, 0, 0));
+      }
+      .step_pop
+      {
+        position: absolute;
+        left: 87%;
+        top: 5%;
+        font-size: 24px;
+        color: rgb(0, 134, 7);
+        cursor: pointer;
+        animation: pulse 0.5s linear infinite;
+        animation-play-state: paused;
+        filter: drop-shadow( 0 0 5px rgb(0, 116, 39))
+      }
+
+      .logout_button
+      {
+        position: absolute;
+        left: 84%;
+        top: 5%;
+        font-size: 24px;
+        color: rgb(25, 0, 168);
+        cursor: pointer;
+        animation: pulse 0.5s linear infinite;
+        animation-play-state: paused;
+        filter: drop-shadow( 0 0 5px rgb(0, 8, 116))
+      }
+
+
+    @keyframes pulse
+    {
+  0%
+  {
+    transform: scale(1);
+  }
+  50%
+  {
+    transform: scale(1.2);
+    filter : drop-shadow( 0 0 5px rgb(41, 41, 41));
+  }
+  100%
+  {
+    transform: scale(1);
+  }
+    }
+
+
+  .bannSong
+
+  {
+    appearance: none;
+    background-color: #00ff55;
+    border: 1px solid #d3d3d3;
+    border-radius: 26px;
+    cursor: pointer;
+    height: 28px;
+    position: absolute;
+    top: 88%;
+    display: block;
+    left: 50px;
+    transition: border .25s .15s, box-shadow .25s .3s, padding .25s;
+    width: 44px;
+    -webkit-appearance: none;
+  }
+
+  .bannSong::after {
+    background-color: white;
+    border: 1px solid #d3d3d3;
+    border-radius: 24px;
+    box-shadow: inset 0 -3px 3px rgba(0, 0, 0, 0.025), 0 1px 4px rgba(0, 0, 0, 0.15), 0 4px 4px rgba(0, 0, 0, 0.1);
+    content:'';
+    display: block;
+    height: 24px;
+    left: 0;
+    position: absolute;
+    right: 16px;
+    top: 0;
+    transition: border .25s .15s, left .25s .1s, right .15s .175s;
+  }
+
+  .bannSong:checked {
+    border-color: #e40a0a;
+    box-shadow: inset 0 0 0 13px #cc002c;
+    background-color: rgb(9, 51, 0);
+    padding-left: 18px;
+    transition: border .25s, box-shadow .25s, padding .25s .15s;
+  }
+
+  .bannSong:checked:after {
+    border-color: #ff0000;
+    left: 16px;
+    right: 0;
+    transition: border .25s, left .15s .25s, right .25s .175s;
+  }
+  #ban_ico
+  {
+    position: absolute;
+    top: 90%;
+    left: 25%;
+    color: rgb(255, 0, 55);
+  }
+  .code_id
+  {
+    color: #fff;
+    font-weight: 700;
+    font-family: "calibri";
+  }

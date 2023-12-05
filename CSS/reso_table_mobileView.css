@@ -1,0 +1,625 @@
+@media screen and (max-width: 768px){
+
+  html,body
+  {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      overflow: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      /* transform: scale(2); */
+  }
+
+    .container{
+        width: 97%;
+        left: 3%;
+        position: absolute;
+        top: 15%;
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        /* background-color: #747474; */
+      }
+      
+      input[type=text]{
+        position: relative;
+        top: 0px;
+        padding: 15px 40px 15px 20px;
+        width: 97%;
+        color: #00f020;
+        /* text-transform: uppercase; */
+        font-size: 16px;
+        font-weight: 100;
+        letter-spacing: 2px;
+        border: none;
+        border-radius: 5px;
+        background: #222;
+        box-shadow: 0 0 5px solid #222;
+        transition: width 0.4s ease;
+        outline: none;
+      }
+        
+        /* input[type=text]:focus{ width: 95%; } */
+    
+      
+      i{
+        position: relative;
+        left: -37px;
+        color: #00faed;
+      }
+
+      .songs_number
+      {
+        position: absolute;
+        top: 11%;
+        left: 4.5%;
+        font-size: 14px;
+        font-weight: 700;
+        font-family: "calibri";
+        color: #222;
+      }
+
+
+/* -----------------------------------------------------------GENRE SELECT-------------------------------------------------------------------  */
+      #genre_selection:focus
+      {
+        position: relative;
+        padding: 15px 40px 15px 20px;
+        width: 30%;
+        left: 5%;
+        top: 30px;
+        color: #2bff00;
+        /* text-transform: uppercase; */
+        font-size: 12px;
+        font-weight: 100;
+        letter-spacing: 2px;
+        border: none;
+        border-radius: 5px;
+        background: linear-gradient(165deg, #b68e8e 0%,#464747 #F9F9F9 100%);
+        box-shadow: 0 0 5px solid #222;
+        transition: 0.5s;
+        background-color: #222;
+        outline: none;
+      }
+    
+      #genre_selection
+      {
+        position: relative;
+        padding: 15px 40px 15px 20px;
+        width: 30%;
+        left: 5%;
+        top: 30px;
+        color: #202020;
+        /* text-transform: uppercase; */
+        font-size: 10px;
+        font-weight: 100;
+        letter-spacing: 2px;
+        border: none;
+        border-bottom: 3px solid #222;
+        /* border-radius: 5px; */
+        background: linear-gradient(165deg, #b68e8e 0%,#464747 #F9F9F9 100%);
+        box-shadow: 0 0 5px solid #222;
+        transition: 0.5s;
+        background-color: rgb(255, 255, 255);
+        outline: none;
+      }
+    
+ 
+      /* ----------------------------------------------------MUSIC EDIT-----------------------------------------------------------------------  */
+      .edit_music
+      {
+        transition: 0.5s;
+        position: absolute;
+        height: 420px;
+        width: 360px;
+        background-color: #070707be;
+        top: 30%;
+        left: 2%;
+        overflow: hidden;
+        backdrop-filter: blur(25px);
+        border-radius: 20px;
+        box-shadow:  0 0 20px #222;
+        opacity: 0;
+        display: none;
+        pointer-events: none;
+        z-index: -1;
+        transition: 0.5s;
+      }
+    
+      .edit_music .edit_music_uploader
+      {
+        position: relative;
+        padding: 15px 40px 15px 20px;
+        width: 79%;
+        top: 55px;
+        left: 5px;
+        color: #04c4ff;
+        /* text-transform: uppercase; */
+        font-size: 16px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        border: none;
+        border-bottom: 2px solid #fff;
+        background: transparent;
+        box-shadow: 0 0 5px solid #222;
+        transition: width 0.4s ease;
+        outline: none;
+        margin-bottom: 10px;
+        transition: 0.8s;
+        border-radius: 0px;
+      }
+    
+      .edit_music .edit_music_artist
+      {
+        position: relative;
+        padding: 15px 40px 15px 20px;
+        width: 79%;
+        top: 55px;
+        left: 5px;
+        color: #04c4ff;
+        font-weight: 700;
+        /* text-transform: uppercase; */
+        font-size: 16px;
+        letter-spacing: 2px;
+        border: none;
+        border-bottom: 2px solid #fff;
+        background: transparent;
+        box-shadow: 0 0 5px solid #222;
+        transition: width 0.4s ease;
+        outline: none;
+        margin-bottom: 10px;
+        transition: 0.8s;
+        border-radius: 0px;
+      }
+    
+      .edit_music .edit_music_genre
+      {
+        position: relative;
+        padding: 15px 40px 15px 20px;
+        width: 79%;
+        top: 55px;
+        left: 5px;
+        /* text-transform: uppercase; */
+        font-size: 16px;
+        color: #04c4ff;
+        font-weight: 700;
+        letter-spacing: 2px;
+        border: none;
+        border-bottom: 2px solid #fff;
+        background: transparent;
+        box-shadow: 0 0 5px solid #222;
+        transition: width 0.4s ease;
+        outline: none;
+        margin-bottom: 10px;
+        transition: 0.8s;
+        border-radius: 0px;
+      }
+    
+      .edit_music .edit_music_album
+      {
+        position: relative;
+        padding: 15px 40px 15px 20px;
+        width: 79%;
+        top: 55px;
+        left: 5px;
+        /* text-transform: uppercase; */
+        font-size: 16px;
+        color: #04c4ff;
+        font-weight: 700;
+        letter-spacing: 2px;
+        border: none;
+        border-bottom: 2px solid #fff;
+        background: transparent;
+        box-shadow: 0 0 5px solid #222;
+        transition: width 0.4s ease;
+        outline: none;
+        margin-bottom: 10px;
+        transition: 0.8s;
+        border-radius: 0px;
+      }
+    
+      .edit_music .edit_music_genre:focus
+      {
+        border-bottom: 2px solid #2bff00;
+      }
+    
+    
+      .edit_music .edit_music_artist:focus
+      {
+        border-bottom: 2px solid #2bff00;
+      }
+    
+      .edit_music .edit_music_uploader:focus
+      {
+        border-bottom: 2px solid #2bff00;
+      }
+    
+      .edit_music .edit_music_album:focus
+      {
+        border-bottom: 2px solid #2bff00;
+      }
+      
+      .edit_music label 
+      {
+        position: relative;
+        top: 50px;
+        left: 25px;
+        font-size: 14px;
+        font-family: "Calibri";
+        color: #d4d4d4;
+        font-weight: 700;
+      }
+    
+      .bn632-hover {
+        transition: 0.5s;
+        transform: translateX(00px);
+        position: absolute;
+        top: 82%;
+        left: 46%;
+        width: 160px;
+        font-size: 16px;
+        font-weight: 600;
+        color: #fff;
+        cursor: pointer;
+        margin: 20px;
+        height: 45px;
+        text-align:center;
+        border: none;
+        background-size: 300% 100%;
+        border-radius: 50px;
+        moz-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        -webkit-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+      }
+      
+      .bn632-hover:hover {
+        background-position: 100% 0;
+        moz-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        -webkit-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+      }
+      
+      .bn632-hover:focus {
+        outline: none;
+      }
+      
+      .bn632-hover.bn26 {
+        background-image: linear-gradient(
+          to right,
+          #1d7906,
+          #6beb44,
+          #04fe75,
+          #3fed48
+        );
+        box-shadow: 0 4px 15px 0 rgba(40, 155, 5, 0.75);
+      }
+      #close_edit_music
+      {
+        position: absolute;
+        top: 20px;
+        left: 90%;
+        font-size:20px;
+        color: rgb(255, 255, 255);
+        cursor: pointer;
+      }
+      .success_notif
+      {
+        position: absolute;
+        top: 5px;
+        left: 22px;
+        font-family: "calibri";
+        color: #2bff00;
+        font-weight: 700;
+        display: none;
+        transition: 0.5s;
+      }
+ /* ------------------------------------------------BUTTONS------------------------------------------------------------------------     */
+    .upload_section_pop
+    {
+      position: absolute;
+      left: 90%;
+      top: 2%;
+      font-size: 24px;
+      color: #222;
+      cursor: pointer;
+      animation: pulse 0.5s linear infinite;
+      animation-play-state: paused;
+      filter: drop-shadow( 0 0 5px #222);
+      z-index: 101;
+      transition: 2.5s;
+      }
+    
+      .info_pop
+      {
+        position: absolute;
+        left: 82%;
+        top: 2%;
+        z-index: 101;
+        font-size: 24px;
+        color: rgb(255, 0, 55);
+        cursor: pointer;
+        animation: pulse 0.5s linear infinite;
+        animation-play-state: paused;
+        filter: drop-shadow( 0 0 5px rgb(255, 0, 0));
+        transition: 2.5s;
+        }
+        .step_pop
+        {
+          position: absolute;
+          left: 74%;
+          top: 2%;
+          font-size: 24px;
+          color: rgb(0, 134, 7);
+          cursor: pointer;
+          animation: pulse 0.5s linear infinite;
+          animation-play-state: paused;
+          filter: drop-shadow( 0 0 5px rgb(0, 116, 39));
+          transition: 2.5s;
+          z-index: 101;
+        }
+    
+        .logout_button
+        {
+          position: absolute;
+          left: 66%;
+          top: 2%;
+          font-size: 24px;
+          color: rgb(25, 0, 168);
+          cursor: pointer;
+          animation: pulse 0.5s linear infinite;
+          animation-play-state: paused;
+          filter: drop-shadow( 0 0 5px rgb(0, 8, 116));
+          z-index: 101;
+          transition: 2.5s;
+        }
+    
+    
+      @keyframes pulse
+      {
+    0%
+    {
+      transform: scale(1);
+    }
+    50%
+    {
+      transform: scale(1.2);
+      filter : drop-shadow( 0 0 5px rgb(41, 41, 41));
+    }
+    100%
+    {
+      transform: scale(1);
+    }
+      }
+    
+ /* -----------------------------------------------------BANSONG------------------------------------------------------------------     */
+    .bannSong
+    
+    {
+      appearance: none;
+      background-color: #00ff55;
+      border: 1px solid #d3d3d3;
+      border-radius: 26px;
+      cursor: pointer;
+      height: 28px;
+      position: absolute;
+      top: 88%;
+      display: block;
+      left: 20px;
+      transition: border .25s .15s, box-shadow .25s .3s, padding .25s;
+      width: 44px;
+      -webkit-appearance: none;
+    }
+    
+    .bannSong::after {
+      background-color: white;
+      border: 1px solid #d3d3d3;
+      border-radius: 24px;
+      box-shadow: inset 0 -3px 3px rgba(0, 0, 0, 0.025), 0 1px 4px rgba(0, 0, 0, 0.15), 0 4px 4px rgba(0, 0, 0, 0.1);
+      content:'';
+      display: block;
+      height: 24px;
+      left: 0;
+      position: absolute;
+      right: 16px;
+      top: 0;
+      transition: border .25s .15s, left .25s .1s, right .15s .175s;
+    }
+    
+    .bannSong:checked {
+      border-color: #e40a0a;
+      box-shadow: inset 0 0 0 13px #cc002c;
+      background-color: rgb(9, 51, 0);
+      padding-left: 18px;
+      transition: border .25s, box-shadow .25s, padding .25s .15s;
+    }
+    
+    .bannSong:checked:after {
+      border-color: #ff0000;
+      left: 16px;
+      right: 0;
+      transition: border .25s, left .15s .25s, right .25s .175s;
+    }
+    #ban_ico
+    {
+      position: absolute;
+      top: 90%;
+      left: 25%;
+      color: rgb(255, 0, 55);
+    }
+    .code_id
+    {
+      color: #fff;
+      font-weight: 700;
+      font-family: "calibri";
+    }
+
+/* --------------------------------------------------PROFILE------------------------------------------------------------- */
+    .usr_profile_reso_dev  
+{
+  position: absolute;
+  top: 1%;
+  left: 5%;
+  height: 20px;
+  width: 20px;
+  background-color: rgb(78, 78, 78);
+  box-shadow: 0 0 5px rgb(17, 17, 17);
+  border-radius: 50%;
+
+}
+.dev_tag
+{
+  position: fixed;
+  margin-left: 5px ;
+  height: 20px;
+  top: 8px;
+  left: 36%;
+  filter: drop-shadow(0 0 15px rgb(3, 87, 0));
+  border-radius: 10px;
+  pointer-events: none;
+}
+.usr_name_disp
+{
+  position: absolute;
+  top: 0px;
+  left: 12%;
+  width: 60%;
+  font-size: 12px;
+  float: right;
+  font-family: 'Satisfy', cursive;
+  color: #252525;
+  text-transform: capitalize;
+  pointer-events: none;
+}
+
+.usr_profile_pic
+{
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background-position: center;
+  background-size: cover;
+  pointer-events: none;
+}
+
+/* ------------------------------------------------------THE MUSIC BUTTON---------------------------------------------------------------  */
+
+.music_upd_button_reso {
+    position: absolute;
+    top: 7%;
+    left: 64%;
+    display: block;
+    width: 70px;
+    height: 40px;
+    margin: 0 auto;
+    border: none;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    border-radius: 0px;
+    box-shadow: 0 0px 15px #ffffff;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: 0.5s;
+  }
+  
+  .music_upd_button_reso:before,
+  .music_upd_button_reso:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+  }
+  
+  .music_upd_button_reso:before {
+    transform: scale(1);
+    background: linear-gradient(25deg, rgb(0, 174, 255), rgb(0, 238, 255));
+    background-size: cover;
+    transition: 0.3s ease transform;
+    z-index: 1;
+    border-radius: 10px;
+  }
+  
+
+  
+  .music_upd_button_reso div {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 3;
+    
+  }
+  
+  .music_upd_button_reso div:before,
+  .music_upd_button_reso div:after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    color: #fff;
+    font-size: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    line-height: 1;
+    text-align: center;
+    padding: 25px 0;
+    transition: 0.3s ease all;
+    
+  }
+  
+  .music_upd_button_reso div:before {
+    content: "Upload";
+    /* position: absolute; */
+    letter-spacing: 0;
+    opacity: 1;
+    font-size: 10px;
+    top: -10px;
+    transform: scale(1);
+    
+  }
+  
+  
+  .music_upd_button_reso:hover:before {
+    transform: scale(1.3);
+  }
+  
+  .music_upd_button_reso:hover div:before {
+    letter-spacing: 3px;
+    opacity: 0;
+    transform: scale(4);
+  }
+  
+  .music_upd_button_reso:hover div:after {
+    letter-spacing: 0;
+    opacity: 1;
+    transform: scale(1);
+  }
+  /* -----------------------------------------------------------THE MUSIC ZONE------------------------------------------------------------  */
+
+  .the_musics
+  {
+    position: absolute;
+    top: 25%;
+    height: 450px;
+    width: 100%;
+    overflow: auto;
+    overflow-x: none;
+    background-color: transparent;
+    backdrop-filter: blur(25px);
+    display: block;
+    padding-bottom: 15px;
+    cursor: pointer;
+  }
+}
