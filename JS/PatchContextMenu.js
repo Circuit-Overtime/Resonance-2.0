@@ -1,4 +1,4 @@
-document.body.innerHTML += `<p id="rightClickVouch"></p>`;
+
     window.addEventListener('contextmenu', (event) => {
       rotate_deg = ["13deg", "-15deg", "25deg" , "-25deg" , "17deg", "-17deg", "-10deg", "10deg"];
       text_strings = ["sorry!", "killed RMB", "BAAAM!!", "Bruuhh!", "doesn't work!!", "SIKE!!", "don't-cheat", "you ain't developer!"];
